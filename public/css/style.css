@@ -1,0 +1,222 @@
+body {
+  background-image: url("/img/Ship-background.png");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#svg9 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  padding: 28px;
+}
+
+.Button {
+  background-color: transparent;
+  color: black;
+  border-color: navy;
+  padding: 8px;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-left: 10px;
+  font-size: 115%;
+  font-family: "Courgette", cursive;
+}
+.Button:hover {
+  background: #009fff;
+  background: -webkit-linear-gradient(to right, #ec2f4b, #009fff);
+  background: linear-gradient(to right, #ec2f4b, #009fff);
+  color: white;
+}
+
+.modal-bg {
+  position: fixed;
+  width: 50%;
+  height: 50%;
+  left: 300px;
+  /* bottom: 200px; */
+  border-radius: 25px;
+  /* top: 0;
+  left: 0; */
+  /* height: 100vh; */
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  background: url(../img/pop-up\ bg.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0s;
+  border: 2px solid black;
+}
+.bg-active {
+  visibility: visible;
+  opacity: 1;
+}
+.country-bg {
+  bottom: 200px;
+}
+.modal {
+  position: relative;
+  /* border-radius: 25px; */
+  z-index: 1;
+  position: relative;
+  /* background-color: #e7e0c9; */
+  color: black;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  /* border: 2px solid black; */
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal button {
+  border-radius: 25px;
+  padding: 10px 30px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.answer {
+  border-radius: 25px;
+}
+span {
+  font-weight: bold;
+  position: absolute;
+  top: 110%;
+}
+.question {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.bg-img {
+  z-index: -1;
+  border-radius: 25px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  background-color: rgba(229, 226, 226, 0.986);
+  width: 25%;
+  float: right;
+  height: 32px;
+  margin-top: 8px;
+  margin-right: 10px;
+}
+
+.bar {
+  background-color: salmon;
+  width: 30%;
+  float: right;
+  height: 32px;
+}
+
+.army {
+  text-align: right;
+  margin-right: 120px;
+  font-size: 138%;
+  font-family: "El Messiri", sans-serif;
+}
+
+.GameOver {
+  float: right;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  padding: 23px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: transparent;
+  border-color: #1a2a6c;
+  font-family: "Merriweather", serif;
+  font-size: 16px;
+}
+
+.GameOver:hover {
+  background: #43c6ac; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #191654,
+    #43c6ac
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #191654,
+    #43c6ac
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+}
+
+.bon1 {
+  visibility: hidden;
+}
+.bon2 {
+  visibility: hidden;
+}
+.bon3 {
+  visibility: hidden;
+}
+
+/* .visible {
+  visibility: visible;
+} */
+
+.Petherion {
+  visibility: hidden;
+}
+
+.Pdanera {
+  visibility: hidden;
+}
+.Pgorene {
+  visibility: hidden;
+}
+
+.Parthora {
+  visibility: hidden;
+}
+
+.Pwrafuthen {
+  visibility: hidden;
+}
+
+.Pqaevia {
+  visibility: hidden;
+}
+
+.Pyitanada {
+  visibility: hidden;
+}
+
+.Psilven {
+  visibility: hidden;
+}
+
+.Pidzora {
+  visibility: hidden;
+}
+
+.Pmiorbmark {
+  visibility: hidden;
+}
+
+#icon{
+  float: right;
+}
