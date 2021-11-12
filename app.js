@@ -203,30 +203,20 @@ app.get("/game/:userId", (req, res) => {
         if (err) console.log(err);
         else {
           
-// var items = [1, 2, 3];
-// items[Math.floor(Math.random() * items.length)];
+var items = [1, 2, 3];
+items[Math.floor(Math.random() * items.length)];
 
-// let Qyitanada=items[Math.floor(Math.random() * items.length)];
-// let Qwrafuthen=items[Math.floor(Math.random() * items.length)];
-// let Qsilven=items[Math.floor(Math.random() * items.length)];
-// let Qqaevia=items[Math.floor(Math.random() * items.length)];
-// let Qmiorbmark=items[Math.floor(Math.random() * items.length)];
-// let Qidzora=items[Math.floor(Math.random() * items.length)];
-// let Qgorene=items[Math.floor(Math.random() * items.length)];
-// let Qetherion=items[Math.floor(Math.random() * items.length)];
-// let Qdanera=items[Math.floor(Math.random() * items.length)];
-// let Qarthora=items[Math.floor(Math.random() * items.length)];
+let Qyitanada=items[Math.floor(Math.random() * items.length)];
+let Qwrafuthen=items[Math.floor(Math.random() * items.length)];
+let Qsilven=items[Math.floor(Math.random() * items.length)];
+let Qqaevia=items[Math.floor(Math.random() * items.length)];
+let Qmiorbmark=items[Math.floor(Math.random() * items.length)];
+let Qidzora=items[Math.floor(Math.random() * items.length)];
+let Qgorene=items[Math.floor(Math.random() * items.length)];
+let Qetherion=items[Math.floor(Math.random() * items.length)];
+let Qdanera=items[Math.floor(Math.random() * items.length)];
+let Qarthora=items[Math.floor(Math.random() * items.length)];
 
-let Qyitanada=3;
-let Qwrafuthen=3;
-let Qsilven=3;
-let Qqaevia=3;
-let Qmiorbmark=3;
-let Qidzora=3;
-let Qgorene=3;
-let Qetherion=3;
-let Qdanera=3;
-let Qarthora=3;
 
 // console.log("random checker\n"+Qarthora);
 // console.log(Qdanera);
