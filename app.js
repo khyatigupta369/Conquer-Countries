@@ -189,6 +189,20 @@ app.get("/ginstruction/:userId", (req, res) => {
 );
 
 
+
+app.get("/game/:userId", (req, res) => {
+  // console.log("from game route " + req.user);
+  if (req.isAuthenticated()) {
+    const userId = req.params.userId;
+    // console.log(userId + " userID");
+    User.findOne(
+      {
+        _id: userId,
+      },
+      (err, found) => {
+        if (err) console.log(err);
+        else {
+          
 var items = [1, 2, 3];
 items[Math.floor(Math.random() * items.length)];
 
@@ -213,20 +227,6 @@ console.log(Qqaevia);
 console.log(Qsilven);
 console.log(Qwrafuthen);
 console.log(Qyitanada);
-
-app.get("/game/:userId", (req, res) => {
-  // console.log("from game route " + req.user);
-  if (req.isAuthenticated()) {
-    const userId = req.params.userId;
-    // console.log(userId + " userID");
-    User.findOne(
-      {
-        _id: userId,
-      },
-      (err, found) => {
-        if (err) console.log(err);
-        else {
-          
 
           User.findOneAndUpdate(
                 { _id: userId },
