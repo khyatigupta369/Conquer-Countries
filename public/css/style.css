@@ -36,10 +36,11 @@ body {
 .modal-bg {
   /* padding: 0; */
   position: fixed;
-  width: 50%;
-  height: 50%;
-  left: 300px;
-  /* bottom: 200px; */
+  width: 80%;
+  height: 80%;
+  left: 80px;
+  top: 80px;
+  
   border-radius: 25px;
   /* top: 0;
   left: 0; */
@@ -69,14 +70,16 @@ body {
   position: relative;
   /* background-color: #e7e0c9; */
   color: black;
-  /* width: 50%;
-  height: 50%; */
+  width: 90%;
+  /* height: 50%; */
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
   /* border: 2px solid black; */
   /* padding: 0; */
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 .modal-close {
@@ -98,6 +101,12 @@ body {
   
 }
 
+form > input[type="number"]{
+  height:1.2em;
+  font-size: 17px;
+  text-align: center;
+}
+
 .answer {
   border-radius: 25px;
 }
@@ -106,10 +115,11 @@ span {
   position: absolute;
   top: 110%;
 }
-.question {
+.question  {
   font-weight: bold;
   font-size: 2rem;
 }
+
 .bg-img {
   z-index: -1;
   border-radius: 25px;

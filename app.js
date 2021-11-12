@@ -203,30 +203,41 @@ app.get("/game/:userId", (req, res) => {
         if (err) console.log(err);
         else {
           
-var items = [1, 2, 3];
-items[Math.floor(Math.random() * items.length)];
+// var items = [1, 2, 3];
+// items[Math.floor(Math.random() * items.length)];
 
-let Qyitanada=items[Math.floor(Math.random() * items.length)];
-let Qwrafuthen=items[Math.floor(Math.random() * items.length)];
-let Qsilven=items[Math.floor(Math.random() * items.length)];
-let Qqaevia=items[Math.floor(Math.random() * items.length)];
-let Qmiorbmark=items[Math.floor(Math.random() * items.length)];
-let Qidzora=items[Math.floor(Math.random() * items.length)];
-let Qgorene=items[Math.floor(Math.random() * items.length)];
-let Qetherion=items[Math.floor(Math.random() * items.length)];
-let Qdanera=items[Math.floor(Math.random() * items.length)];
-let Qarthora=items[Math.floor(Math.random() * items.length)];
+// let Qyitanada=items[Math.floor(Math.random() * items.length)];
+// let Qwrafuthen=items[Math.floor(Math.random() * items.length)];
+// let Qsilven=items[Math.floor(Math.random() * items.length)];
+// let Qqaevia=items[Math.floor(Math.random() * items.length)];
+// let Qmiorbmark=items[Math.floor(Math.random() * items.length)];
+// let Qidzora=items[Math.floor(Math.random() * items.length)];
+// let Qgorene=items[Math.floor(Math.random() * items.length)];
+// let Qetherion=items[Math.floor(Math.random() * items.length)];
+// let Qdanera=items[Math.floor(Math.random() * items.length)];
+// let Qarthora=items[Math.floor(Math.random() * items.length)];
 
-console.log("random checker\n"+Qarthora);
-console.log(Qdanera);
-console.log(Qetherion);
-console.log(Qgorene);
-console.log(Qidzora);
-console.log(Qmiorbmark);
-console.log(Qqaevia);
-console.log(Qsilven);
-console.log(Qwrafuthen);
-console.log(Qyitanada);
+let Qyitanada=3;
+let Qwrafuthen=3;
+let Qsilven=3;
+let Qqaevia=3;
+let Qmiorbmark=3;
+let Qidzora=3;
+let Qgorene=3;
+let Qetherion=3;
+let Qdanera=3;
+let Qarthora=3;
+
+// console.log("random checker\n"+Qarthora);
+// console.log(Qdanera);
+// console.log(Qetherion);
+// console.log(Qgorene);
+// console.log(Qidzora);
+// console.log(Qmiorbmark);
+// console.log(Qqaevia);
+// console.log(Qsilven);
+// console.log(Qwrafuthen);
+// console.log(Qyitanada);
 
           User.findOneAndUpdate(
                 { _id: userId },
@@ -338,7 +349,7 @@ app.post("/game/:userId",(req,res)=>{
         let bonus1 = req.body.bonus1;
         let armySize = found.armySize;
         let bon1 = found.bon1;
-        if (bonus1 == 47632) {
+        if (bonus1 == 534) {
           armySize = armySize + 100;
         }
         bon1 = "bon1";
@@ -369,7 +380,7 @@ app.post("/game/:userId",(req,res)=>{
         let armySize = found.armySize;
         let bon2 = found.bon2;
         if (bonus2 == 67) {
-          armySize = armySize + 200;
+          armySize = armySize + 150;
           // console.log("chalgya");
         }
         // console.log("yeh wala " + armySize);
@@ -401,7 +412,7 @@ app.post("/game/:userId",(req,res)=>{
         let armySize = found.armySize;
         let bon3 = found.bon3;
         if (bonus3 == 2) {
-          armySize = armySize + 300;
+          armySize = armySize + 200;
           // console.log("chalgya");
         }
         // console.log("yeh wala " + armySize);

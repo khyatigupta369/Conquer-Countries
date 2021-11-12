@@ -29,8 +29,7 @@
     <button class="Button <%=bon1%>">Bonus 1</button>
     <div class="modal-bg">
         <div class="modal">
-            <p class="question">Which number is the odd one out?
-                47632, 84129, 32418, 36119, 67626, 72927
+            <p class="question">King of Qaevia has an army size of 3000 and a train. The king wants to transport the maximum number of army people to the borders to fight with the king of Wrafuthen which is 1000 KMs away from the base, using only the train as a mode of transportation. The train cannot carry more than 1000 army men at a time and the army of Wrafuthen kills one army man in every km train travels. What is the maximum number of army men that can be transferred to the destination using only the train(no other mode of transportation is allowed). 
 </p>
 
             <form class="" action=<%= "/game/" + userId %> method="post">
@@ -300,83 +299,82 @@
         <div class="modal">
             <% if (Qetherion == 1) { %>
                 <p> Deepak’s company is very famous for successfully completing each and every project in time. He handles each and every project in a very efficient and organized manner. For each project he divides his employees into various levels based on their experience and knowledge in that domain. Always a hierarchy is formed such that under each employee there work upto two employees. The hierarchy may consist of 1 or more employees depending upon the size and requirement of the project.
-
-                    Employees are identified by their ids and each employee works under at most one employee. An employee X is considered to be the senior of employee Y if employee Y is directly working under employee X or if there is some employee Z for which X is a senior of Z and Y is a working under of Z. No employee is senior to himself/herself. The employee at top-most level is senior of all employees.
+                <br>
+                    Employees are identified by their ids and each employee works under at most one employee. An employee X is considered to be the senior of employee Y if employee Y is directly working under employee X or if there is some employee Z for which X is a senior of Z and Y is a working under of Z. No employee is senior to himself/herself. The employee at top-most level is senior of all employees.<br>
                     
-                    But suddenly during a project after dividing the responsibilities among his employees and forming the hierarchy Deepak fell sick. Instead of Deepak, Ramesh was assigned the duty to supervise the project. But, Ramesh has incomplete knowledge of the hierarchy and he wants you to help him to figure out the employee at the top-most level.  He does not remember the ids of the junior employee of each senior employee, but only remembers the sum of their ids.
-                    Input
+                    But suddenly during a project after dividing the responsibilities among his employees and forming the hierarchy Deepak fell sick. Instead of Deepak, Ramesh was assigned the duty to supervise the project. But, Ramesh has incomplete knowledge of the hierarchy and he wants you to help him to figure out the employee at the top-most level.  He does not remember the ids of the junior employee of each senior employee, but only remembers the sum of their ids.<br><br>
+                    Input Format<br>
                     Input begins with an integer N, the total number of employees in the tree. N lines follow with 2 integers each: the id of an employee, and the sum of the ids of its junior employees. The second number will be 0 if the employee has no juniors.
-                    ( Junior employee here refers to the employee working directly under an employee.)
-                    Output
-                    Output a list (not separated by anything) of all possible values for the id of the topmost employee in increasing order. It is guaranteed that at least one such id exists.
+                    ( Junior employee here refers to the employee working directly under an employee.)<br>
+                    Output Format<br>
+                    Output a list (not separated by anything) of all possible values for the id of the topmost employee in increasing order. It is guaranteed that at least one such id exists.<br><br>
                      
-                    Example: 
+                    Example: <br>
                      
-                    Sample INPUT : 
-                    1
-                    4 0
+                    Sample INPUT : <br>
+                    1<br>
+                    4 0<br>
                      
                     Sample Output: 4
+                    <br><br>
                      
                      
-                     
-                    INPUT:
-                    1 5
-                    2 0
-                    3 0
-                    4 0
-                    5 5
-                         6 5
+                    <b>INPUT:<br>
+                    1 5<br>
+                    2 0<br>
+                    3 0<br>
+                    4 0<br>
+                    5 5<br>
+                    6 5</b><br>
                      
                     Tell the output for the given input.
                     </p>
             <% } if (Qetherion == 2) { %>
                 <p>Given a p x q 2D matrix which represents some elements like '1's (cement) and '0's (brick), return the number of houses. 
- 
-                    A house is made up from bricks and is formed by connecting several bricks horizontally and vertically. You may assume all four edges of the grid are all surrounded by bricks.
-                     
-                    Constraints:
-                    ·  	p == grid.length
-                    ·  	q == grid[i].length
-                    ·  	1 ≤ p, q ≤ 300
-                    ·  	grid[i][j] is ‘0’ or ‘1’.
-                    INPUT:
-                    grid = [
-                      ["1","1","0","0","0"],
-                      ["1","1","0","0","0"],
-                      ["0","0","1","0","0"],
-                      ["0","0","0","1","1"]
-                    ]
+ <br>
+                    A house is made up from bricks and is formed by connecting several bricks horizontally and vertically. You may assume all four edges of the grid are all surrounded by bricks.<br>
+                     <br>
+                    Constraints:<br>
+                    ·  	p == grid.length<br>
+                    ·  	q == grid[i].length<br>
+                    ·  	1 ≤ p, q ≤ 300<br>
+                    ·  	grid[i][j] is ‘0’ or ‘1’.<br><br>
+                    <b>INPUT:
+                    grid = [<br>
+                      ["1","1","0","0","0"],<br>
+                      ["1","1","0","0","0"],<br>
+                      ["0","0","1","0","0"],<br>
+                      ["0","0","0","1","1"]<br>
+                    ]</b>
                     </p>
             <% } if (Qetherion == 3) { %>
-                <p>Deepak’s company is very famous for successfully completing each and every project in time. He handles each and every project in a very efficient and organized manner. For each project he divides his employees into various levels based on their experience and knowledge in that domain. Always a hierarchy is formed such that under each employee there work upto two employees. The hierarchy may consist of 1 or more employees depending upon the size and requirement of the project.
-
-                    Employees are identified by their ids and each employee works under at most one employee. An employee X is considered to be the senior of employee Y if employee Y is directly working under employee X or if there is some employee Z for which X is a senior of Z and Y is a working under of Z. No employee is senior to himself/herself. The employee at top-most level is senior of all employees.
+                <p> Deepak’s company is very famous for successfully completing each and every project in time. He handles each and every project in a very efficient and organized manner. For each project he divides his employees into various levels based on their experience and knowledge in that domain. Always a hierarchy is formed such that under each employee there work upto two employees. The hierarchy may consist of 1 or more employees depending upon the size and requirement of the project.<br>
+                    Employees are identified by their ids and each employee works under at most one employee. An employee X is considered to be the senior of employee Y if employee Y is directly working under employee X or if there is some employee Z for which X is a senior of Z and Y is a working under of Z. No employee is senior to himself/herself. The employee at top-most level is senior of all employees.<br>
                     
-                    But suddenly during a project after dividing the responsibilities among his employees and forming the hierarchy Deepak fell sick. Instead of Deepak, Ramesh was assigned the duty to supervise the project. But, Ramesh has incomplete knowledge of the hierarchy and he wants you to help him to figure out the employee at the top-most level.  He does not remember the ids of the junior employee of each senior employee, but only remembers the sum of their ids.
-                    Input
+                    But suddenly during a project after dividing the responsibilities among his employees and forming the hierarchy Deepak fell sick. Instead of Deepak, Ramesh was assigned the duty to supervise the project. But, Ramesh has incomplete knowledge of the hierarchy and he wants you to help him to figure out the employee at the top-most level.  He does not remember the ids of the junior employee of each senior employee, but only remembers the sum of their ids.<br><br>
+                    Input Format<br>
                     Input begins with an integer N, the total number of employees in the tree. N lines follow with 2 integers each: the id of an employee, and the sum of the ids of its junior employees. The second number will be 0 if the employee has no juniors.
-                    ( Junior employee here refers to the employee working directly under an employee.)
-                    Output
-                    Output a list (not separated by anything) of all possible values for the id of the topmost employee in increasing order. It is guaranteed that at least one such id exists.
+                    ( Junior employee here refers to the employee working directly under an employee.)<br>
+                    Output Format<br>
+                    Output a list (not separated by anything) of all possible values for the id of the topmost employee in increasing order. It is guaranteed that at least one such id exists.<br><br>
                      
-                    Example: 
+                    Example: <br>
                      
-                    Sample INPUT : 
-                    1
-                    4 0
+                    Sample INPUT : <br>
+                    1<br>
+                    4 0<br>
                      
                     Sample Output: 4
+                    <br><br>
                      
                      
-                     
-                    INPUT:
-                    1 5
-                    2 0
-                    3 0
-                    4 0
-                    5 5
-                         6 5
+                    <b>INPUT:<br>
+                    1 5<br>
+                    2 0<br>
+                    3 0<br>
+                    4 0<br>
+                    5 5<br>
+                    6 5</b><br>
                      
                     Tell the output for the given input.
                     </p>
@@ -399,75 +397,59 @@
     <div class="modal-bg <%=silven%>  country-bg">
         <div class="modal">
             <% if (Qsilven == 1) { %>
-                <p>In summer vacations, a group of college students led by instructor Aakash goes for camping in a jungle. They decided to play a game for which Aakash hids a card somewhere in the jungle. The game is very simple. Turn by turn each student will go inside the jungle in the search of the card. Aakash has marked the route to the card with N arrows (numbered 0 to N-1) to show them the correct way. 
-                    Some students tries to cheat and rotate the direction of arrows to misguide the other players. Familiar with this nature of students Aakash follows each of them secretly.
-                    
-                    Two types of operations are performed:
-                    
-                    1. The student rotates all the arrows numbered from A to B (both inclusive) out of N arrows. This is represented by the command "0 A B''.
-                    2. Aakash watches and notes down the number of arrows showing the wrong path between A and B (both inclusive). This is represented by the command "1 A B".
-                    
-                    
-                             Input Format :
-                    The first line contains two integers, N and Q. Each of the next Q lines are either of the form "0 A B" or "1 A B" as mentioned above.
-                    
-                    Output Format:
-                    Output single integer for each of the commands of the form "1 A B" containing the required answer for the corresponding command.
-                    
-                    example:
-                    Sample input- 
-                           5 4
-                           1 0 4
-                           0 2 4
-                           1 1 3
-                           1 4 4
-                          
-                    Sample output - 021
-                    
-                    
-                    
-                    Input:
-                    4 7
-                    1 0 3
-                    0 1 2
-                    1 0 1
-                    1 0 0
-                    0 0 3
-                    1 0 3 
-                    1 3 3
-                    
-                    Tell the output for the given input.
+                <p>In summer vacations, a group of college students led by instructor Aakash goes for camping in a jungle. They decided to play a game for which Aakash hid a card somewhere in the jungle. The game is very simple. Turn by turn each student will go inside the jungle in the search of the card. Aakash has marked the route to the card with N arrows (numbered 0 to N-1) to show them the correct way. Some students tried to cheat and rotate the direction of arrows to misguide the other players. Familiar with this nature of students Aakash follows each of them secretly. <br>                    
+                    Two types of operations are performed: <br>                    
+                    1. The student rotates all the arrows numbered from A to B (both inclusive) out of N arrows. This is represented by the command "0 A B" <br>
+                    2. Aakash watches and notes down the number of arrows showing the wrong path between A and B (both inclusive). This is represented by the command "1 A B" <br>
+                    <b> Input Format: </b> The first line contains two integers, N and Q. Each of the next Q lines are either of the form "0 A B" or "1 A B" as mentioned above.<br>                    
+                    Output Format: Output single integer for each of the commands of the form "1 A B" containing the required answer for the corresponding command. Each digit of the output number should be the number of rotated signs for "1 A B" <br>                    
+                    Sample input- <br>
+                           5 4 <br>
+                           1 0 4 <br>
+                           0 2 4 <br>
+                           1 1 3 <br>
+                           1 4 4 <br>                          
+                    Sample output - 021 <br>
+                    <b>Input: <br>
+                    4 7 <br>
+                    1 0 3 <br>
+                    0 1 2 <br>
+                    1 0 1 <br>
+                    1 0 0 <br>
+                    0 0 3 <br>
+                    1 0 3 <br>
+                    1 3 3 <br></b>                 
+                    Give the output for the above input.
                     </p>
             <% } if (Qsilven == 2) { %>
-                <p>Anuj has a building block game, he created two buildings with some blocks. Blocks have some non-negative integer number written on it. Building a[n] and building b[m] where index 0 denotes the top of the building. Anuj challenges Sam to play the following game: 
+                <p>Anuj has a building block game, he created two buildings with some blocks. Blocks have some non-negative integer number written on it. Building a[n] and building b[m] where index 0 denotes the top of the building. Anuj challenges Sam to play the following game: <br><br>
 
-                    1. In each move, Sam can remove one block from the top of either building a or building b.
-                    2. Sam keeps the running sum of integers he removes from the two buildings.
-                    3. Sam is disqualified from the game if, at any point, his running sum becomes greater than some integer maxSum given at the beginning of the game.
-                    4. Sam's final score is the total number of integers he has removed from the two buildings. 
+                    1. In each move, Sam can remove one block from the top of either building a or building b.<br>
+                    2. Sam keeps the running sum of integers he removes from the two buildings.<br>
+                    3. Sam is disqualified from the game if at any point, his running sum becomes greater than some integer maxSum given at the beginning of the game.<br>
+                    4. Sam's final score is the total number of integers he has removed from the two buildings. <br>   <br>                 
+                    Given a,b and maxSum for g games, find the maximum possible score Sam can achieve.<br>
+                    <br>
+                    Example: <br>
+                    a = [1,2,3,4,5] <br>
+                    b = [6,7,8,9] <br>
+                    The maximum number of values Sam can remove is 4. The two sets of choices with this result. <br>
+                    1. Remove 1,2,3,4 from a with a sum of 10. <br>
+                    2. Remove 1,2,3 from a and 6 from b with a sum of 12. <br><br>
                     
-                    Given a,b and maxSum for g games, find the maximum possible score Sam can achieve. 
-                    
-                    Example:
-                    a = [1,2,3,4,5]
-                    b = [6,7,8,9]
-                    The maximum number of values Sam can remove is 4. The two sets of choices with this result.
-                    1. Remove 1,2,3,4 from a with a sum of 10.
-                    2. Remove 1,2,3 from a and 6 from b with a sum of 12.
-                    
-                    Input Format:
-                    The first line contains three space-separated integers describing the respective values of n  (the number of integers in building a ), m (the number of integers in building b), and maxSum (the number that the sum of the integers removed from the two buildings cannot exceed).
-                    The second line contains n space-separated integers, the respective values of a[i] .
+                    <b>Input Format:</b> <br>The first line contains three space-separated integers describing the respective values of n  (the number of integers in building a ), m (the number of integers in building b), and maxSum (the number that the sum of the integers removed from the two buildings cannot exceed). <br>
+                    The second line contains n space-separated integers, the respective values of a[i] <br>
                     The third line contains m space-separated integers, the respective values of b[i].
-                    Return the maximum number of selections Sam can make for the following input: 
-                    17 25 88
-                    8 3 6 2 9 4 7 3 8 2 6 3 21 7 2 8 4
-                    3 9 5 4 8 2 6 4 9 1 2 6 31 9 4 2 9 19 23 7 9 3 6 2 1
+                    <br><br>
+                    Return the maximum number of selections Sam can make for the following input: <br>
+                    <b>17 25 88 <br>
+                    8 3 6 2 9 4 7 3 8 2 6 3 21 7 2 8 4 <br>
+                    3 9 5 4 8 2 6 4 9 1 2 6 31 9 4 2 9 19 23 7 9 3 6 2 1 </b><br>
                     </p>
             <% } if (Qsilven == 3) { %>
-                <p>Alex and Jeorge are very good friends. One day, Alex gave Jeorge a string S of X 0's and Y 1's. Alex asks Jeorge, how many unique permutations of this string start with 1? 
-                    Alex gives Jeorge the following input that consists of X and Y separated by a space: X = 9, Y = 4
-                    Tell us Jeorge’s answer for given input.
+                <p>Alex and George are very good friends. <br> One day, Alex gave George a string S of X 0's and Y 1's. <br> Alex asks Jeorge, how many unique permutations of this string start with 1? <br>
+                  <br><br>  Alex gives Jeorge the following input that consists of X and Y separated by a space:<b> X = 9, Y = 4 </b><br>
+                    Tell us George’s answer for given input.
                     </p>
                 <% } %>
 
@@ -487,38 +469,38 @@
     <div class="modal-bg <%=gorene%> country-bg ">
         <div class="modal">
             <% if (Qgorene == 1) { %>
-                <p>es7. A girl named Sami plays a game with her sister. She told them to call a pair of positive integers, a and b, similar if: 
-                    1. They both are prime.
-                    2. Their absolute difference is exactly equal to 2 (i.e., |b-a| = 2 ). 
-                     
-                    Given an inclusive interval of integers from x to y, can you help her sister to find the number of pairs there are in the interval (i.e., [x,y] )? 
-                    Note that pairs (a,b) and (b,a) are considered to be the same pair.
-                    Input Format:
-                    Two space-separated integers describing the respective values of a and b .
-                    Output Format:
-                    Print a single integer denoting the number of pairs of identical.
-                    Input: 
+                <p>A girl named Sami plays a game with her sister. She told them to call a pair of positive integers, a and b, similar if: <br>
+                    1. They both are prime.<br>
+                    2. Their absolute difference is exactly equal to 2 (i.e., |b-a| = 2 ).<br>
+                     <br>
+                    Given an inclusive interval of integers from x to y, can you help her sister to find the number of pairs there are in the interval (i.e., [x,y] )?
+                    Note that pairs (a,b) and (b,a) are considered to be the same pair.<br><br>
+                    <b>Input Format:</b><br>
+                    Two space-separated integers describing the respective values of a and b.<br><br>
+                   <b> Output Format:</b><br>
+                    Print a single integer denoting the number of pairs of identical.<br><br>
+                    <b>Input:</b><br>
                     3 13
                     </p>
             <% } if (Qgorene == 2) { %>
-                <p> Jack is an engineer who goes to his village for holidays. He got to know that there were some thieves living in this village who rob the houses daily. So he made a security system. If a thief robbed two adjacent houses on the same night then the system will automatically contact police. 
-                    Given an integer array num representing the amount in each house, return the maximum amount that can be robbed without alerting the police.
-                    Constraints:
-                    1 &lt;= nums.length &lt;= 100
-                    0 &lt;= nums[i] &lt;= 400
-                    Input:
-                    nums = [2,7,9,3,1]
+                <p> Jack is an engineer who goes to his village for holidays. He got to know that there were some thieves living in this village who rob the houses daily. So he made a security system. If a thief robbed two adjacent houses on the same night then the system will automatically contact police. <br><br>
+                    Given an integer array num representing the amount in each house, return the maximum amount that can be robbed without alerting the police.<br><br>
+                    Constraints:<br>
+                    1 &lt;= nums.length &lt;= 100<br>
+                    0 &lt;= nums[i] &lt;= 400<br><br>
+                    <b>Input:</b><br>
+                    nums = [2,7,9,3,1]<br>
                     </p>
             <% } if (Qgorene == 3) { %>
-                <p>Sam went on a family trip to Vegas. When he was returning to his hotel after travelling, he saw a mysterious villa. He is curious about this strange villa and wants to explore it. When he reached the entry gate, the guard gave him a problem to solve and said that he would allow him to enter the villa only if he solved it.
-                    The guard gave Sam two integers X and K. Sam needs to determine whether there is an integer A such that it has exactly X positive integer divisors and exactly K of them are prime numbers.
+                <p>Sam went on a family trip to Vegas. When he was returning to his hotel after travelling, he saw a mysterious villa. He is curious about this strange villa and wants to explore it. When he reached the entry gate, the guard gave him a problem to solve and said that he would allow him to enter the villa only if he solved <br>
+                    The guard gave Sam two integers X and K. Sam needs to determine whether there is an integer A such that it has exactly X positive integer divisors and exactly K of them are prime numbers. <br>
                     Sam found this problem really hard to solve. Can you help him?
-                    INPUT FORMAT:
-                    The first and only line of input contains two space-separated integers X and K.
-                    OUTPUT FORMAT:  print a single line containing one integer:1 if a valid integer A exists or 0 if it does not exist.
-                    INPUT: 
-                    1
-                    4 2
+                  <br>  <b>INPUT FORMAT:</b><br>
+                    The first and only line of input contains two space-separated integers X and K.<br>
+                   <br> <b>OUTPUT FORMAT:</b> <br> 
+                    print a single line containing one integer:1 if a valid integer A exists or 0 if it does not exist.
+                 <br>  <b> INPUT: </b><br>
+                    4 2<br>
                     </p>
                 <% } %>
 
@@ -539,58 +521,60 @@
     <div class="modal-bg <%=yitanada%> country-bg">
         <div class="modal">
             <% if (Qyitanada == 1) { %>
-                <p>Diana has opened a new bakery shop "Bakerana" and she has to find cooks. Diana has K candidates, each of them is characterized by P[i] and S[i] - the number of variety of cakes that he can make per minute and the salary he wants, Cook gets salary only once. Two of them can't work on the one order together, but every cook whenever he wants can interrupt another cook and start working on his order, even if the previous cook doesn't finish some of the dishes from his order. Moreover, the transition from one order to another is instantaneous (this time can be ignored).
-                    The shop has received N orders. Each order is characterized by two numbers D[i] i M[i] - the number of cakes in order and the number of minutes that the client is ready to wait. "Bakerana" is a new restaurant, so Diana doesn't want to leave bad impression on clients and doesn't want to let them go hungry.
-                    You have to help him to resolve which of the K candidates should get an offer for this job. So, you have to choose some candidates, which can prepare all orders in time and at the same time you have to minimize expenses for the salaries for cooks. "Bakerana" opens in a minute with number 0. If you can not fulfill all orders in time, then output "-1".
-                    Input Format: The first line of input contains integer K denoting numbers of candidates.
-                    Each of the next K lines of input contains two integers P[i] and S[i] denoting the number of dishes that cook with number i can cook per minute and the salary he wants.
-                    The next line of input contains N denoting numbers of orders.
-                    Each of the next N lines of input contains two integers D[i] and M[i] denoting the number of cakes in order with number i and the number of minutes that client with number i is ready to wait.
-                    Output Format: return the minimum of possible costs for hiring cooks or "-1".
-                    INPUT: 
-                    4
-                    5 3
-                    7 2
-                    3 1
-                          5 3
+                <p>Diana has opened a new bakery shop "Bakerana" and she has to find cooks. Diana has K candidates, each of them is characterized by P[i] and S[i] - the number of variety of cakes that he can make per minute and the salary he wants, Cook gets salary only once. Two of them can't work on the one order together, but every cook whenever he wants can interrupt another cook and start working on his order, even if the previous cook doesn't finish some of the dishes from his order. Moreover, the transition from one order to another is instantaneous (this time can be ignored).<br>
+                    The shop has received N orders. Each order is characterized by two numbers D[i] i M[i] - the number of cakes in order and the number of minutes that the client is ready to wait. "Bakerana" is a new restaurant, so Diana doesn't want to leave bad impression on clients and doesn't want to let them go hungry.<br>
+                    You have to help him to resolve which of the K candidates should get an offer for this job. So, you have to choose some candidates, which can prepare all orders in time and at the same time you have to minimize expenses for the salaries for cooks. "Bakerana" opens in a minute with number 0. If you can not fulfill all orders in time, then output "-1".<br>
+                    <b>Input Format</b>:<br>
+                    The first line of input contains integer K denoting numbers of candidates.<br>
+                    Each of the next K lines of input contains two integers P[i] and S[i] denoting the number of dishes that cook with number i can cook per minute and the salary he wants.<br>
+                    The next line of input contains N denoting numbers of orders.<br>
+                    Each of the next N lines of input contains two integers D[i] and M[i] denoting the number of cakes in order with number i and the number of minutes that client with number i is ready to wait.<br>
+                    <b>Output Format</b>: return the minimum of possible costs for hiring cooks or "-1".<br>
+                    <b>INPUT:</b><br> 
+                    4<br>
+                    5 3<br>
+                    7 2<br>
+                    3 1<br>
+                    5 3<br>
                     </p>
             <% } if (Qyitanada == 2) { %>
-                <p>The ruler of country Arthura King Robin II has a keen interest in Archaeology.In one of his excavation sites he discovered a wealth of treasure hidden deep in an ancient ruin. The room that houses this treasure is tiled in a grid-like fashion with columns at the grid points (the corners where tiles meet). So, the only way to traverse this room is by traveling from a tile to one of its four adjacent tiles.
+                <p>The ruler of country Arthura King Robin II has a keen interest in Archaeology.In one of his excavation sites he discovered a wealth of treasure hidden deep in an ancient ruin. The room that houses this treasure is tiled in a grid-like fashion with columns at the grid points (the corners where tiles meet). So, the only way to traverse this room is by traveling from a tile to one of its four adjacent tiles.<br>
 
-                    Alas, when Robin II and his team reached the treasure a trap was sprung and some gaping holes opened at some of the tiles. Over time, the tiles next to these holes will also collapse to create larger holes. This process will continue until all tiles in the room collapse!
+                    Alas, when Robin II and his team reached the treasure a trap was sprung and some gaping holes opened at some of the tiles. Over time, the tiles next to these holes will also collapse to create larger holes. This process will continue until all tiles in the room collapse!<br>
                     
-                    Robin II needs to escape the room quickly. But being a greedy King he also wants to carry some treasure back with him. However, Robin II moves slower if he carries more treasure so he has to determine the slowest he is allowed to travel to escape the room alive.
+                    Robin II needs to escape the room quickly. But being a greedy King he also wants to carry some treasure back with him. However, Robin II moves slower if he carries more treasure so he has to determine the slowest he is allowed to travel to escape the room alive.<br>
                     
-                    Suppose Robin II's speed is d tiles per second. After the initial holes are created, Robin II can traverse up to d tiles. Then, all of the tiles adjacent to a collapsed tile will then collapse. After this, Robin II may move another d tiles. Then, all of the tiles adjacent to a collapsed tile will then collapse. This process repeats until either Robin II reaches the exit or else Robin II falls into one of the holes.Robin II better be careful because the exit tile can also collapse which leaves him stranded with no way out!
+                    Suppose Robin II's speed is d tiles per second. After the initial holes are created, Robin II can traverse up to d tiles. Then, all of the tiles adjacent to a collapsed tile will then collapse. After this, Robin II may move another d tiles. Then, all of the tiles adjacent to a collapsed tile will then collapse. This process repeats until either Robin II reaches the exit or else Robin II falls into one of the holes.Robin II better be careful because the exit tile can also collapse which leaves him stranded with no way out!<br>
                     
-                    To be clear, if Robin II steps on an intact tile that is not the exit tile after d steps but then the tile collapses before Robin II can take another step, he falls in the hole and is not able to reach the exit. However, if Robin II steps on the exit tile the moment before it collapses then he can exit safely. Your goal is to compute the minimum integer d such that Robin II can safely reach the exit with speed d without falling into any holes.
-                    
-                    Input
-                    The first line consists of integers r, c, sr, sc, er, ec, h. Here, r and c denote the number of rows and columns, sr and sc denote the row and column of the start cell, er and ec denote the row and column of the exit cell, and h denotes the number of tiles that initially collapse before Robin II starts running for the exit.
-                    
-                    The following h lines each describe a single hole that initially opens. Each hole is given by two numbers hr and hc denoting the row and column of the hole. 
-                    Output:
-                    The output for the given input case should be the minimum integer d for which Robin II can escape with speed d. If Robin II cannot escape with any speed d, then output -999 instead.
-                    
-                    Your input: 
-                    7 2 9 3 3 3 1
-                    4 0
+                    To be clear, if Robin II steps on an intact tile that is not the exit tile after d steps but then the tile collapses before Robin II can take another step, he falls in the hole and is not able to reach the exit. However, if Robin II steps on the exit tile the moment before it collapses then he can exit safely. Your goal is to compute the minimum integer d such that Robin II can safely reach the exit with speed d without falling into any holes.<br>
+                    <br>
+                    <b>Input Format</b>:<br>
+                    The first line consists of integers r, c, sr, sc, er, ec, h. Here, r and c denote the number of rows and columns, sr and sc denote the row and column of the start cell, er and ec denote the row and column of the exit cell, and h denotes the number of tiles that initially collapse before Robin II starts running for the exit.<br>
+                    <br>
+                    The following h lines each describe a single hole that initially opens. Each hole is given by two numbers hr and hc denoting the row and column of the hole. <br><br>
+                    <b>Output Format</b>:<br><br>
+                    The output for the given input case should be the minimum integer d for which Robin II can escape with speed d. If Robin II cannot escape with any speed d, then output -999 instead.<br>
+                    <br>
+                    <b>Input</b>:<br> 
+                    7 2 9 3 3 3 1<br>
+                    4 0<br>
                     </p>
             <% } if (Qyitanada == 3) { %>
-                <p>Diana has opened a new bakery shop "Bakerana" and she has to find cooks. Diana has K candidates, each of them is characterized by P[i] and S[i] - the number of variety of cakes that he can make per minute and the salary he wants, Cook gets salary only once. Two of them can't work on the one order together, but every cook whenever he wants can interrupt another cook and start working on his order, even if the previous cook doesn't finish some of the dishes from his order. Moreover, the transition from one order to another is instantaneous (this time can be ignored).
-                    The shop has received N orders. Each order is characterized by two numbers D[i] i M[i] - the number of cakes in order and the number of minutes that the client is ready to wait. "Bakerana" is a new restaurant, so Diana doesn't want to leave bad impression on clients and doesn't want to let them go hungry.
-                    You have to help him to resolve which of the K candidates should get an offer for this job. So, you have to choose some candidates, which can prepare all orders in time and at the same time you have to minimize expenses for the salaries for cooks. "Bakerana" opens in a minute with number 0. If you can not fulfill all orders in time, then output "-1".
-                    Input Format: The first line of input contains integer K denoting numbers of candidates.
-                    Each of the next K lines of input contains two integers P[i] and S[i] denoting the number of dishes that cook with number i can cook per minute and the salary he wants.
-                    The next line of input contains N denoting numbers of orders.
-                    Each of the next N lines of input contains two integers D[i] and M[i] denoting the number of cakes in order with number i and the number of minutes that client with number i is ready to wait.
-                    Output Format: return the minimum of possible costs for hiring cooks or "-1".
-                    INPUT: 
-                    4
-                    5 3
-                    7 2
-                    3 1
-                          5 3
+                <p>Diana has opened a new bakery shop "Bakerana" and she has to find cooks. Diana has K candidates, each of them is characterized by P[i] and S[i] - the number of variety of cakes that he can make per minute and the salary he wants, Cook gets salary only once. Two of them can't work on the one order together, but every cook whenever he wants can interrupt another cook and start working on his order, even if the previous cook doesn't finish some of the dishes from his order. Moreover, the transition from one order to another is instantaneous (this time can be ignored).<br>
+                    The shop has received N orders. Each order is characterized by two numbers D[i] i M[i] - the number of cakes in order and the number of minutes that the client is ready to wait. "Bakerana" is a new restaurant, so Diana doesn't want to leave bad impression on clients and doesn't want to let them go hungry.<br>
+                    You have to help him to resolve which of the K candidates should get an offer for this job. So, you have to choose some candidates, which can prepare all orders in time and at the same time you have to minimize expenses for the salaries for cooks. "Bakerana" opens in a minute with number 0. If you can not fulfill all orders in time, then output "-1".<br>
+                    <b>Input Format</b>:<br>
+                    The first line of input contains integer K denoting numbers of candidates.<br>
+                    Each of the next K lines of input contains two integers P[i] and S[i] denoting the number of dishes that cook with number i can cook per minute and the salary he wants.<br>
+                    The next line of input contains N denoting numbers of orders.<br>
+                    Each of the next N lines of input contains two integers D[i] and M[i] denoting the number of cakes in order with number i and the number of minutes that client with number i is ready to wait.<br>
+                    <b>Output Format</b>: return the minimum of possible costs for hiring cooks or "-1".<br>
+                    <b>INPUT</b>:<br> 
+                    4<br>
+                    5 3<br>
+                    7 2<br>
+                    3 1<br>
+                    5 3<br>
                     </p>
                 <% } %>
 
@@ -611,50 +595,47 @@
     <div class="modal-bg <%=danera%> country-bg">
         <div class="modal">
             <% if (Qdanera == 1) { %>
-                <p>William IV is preparing for an important war that is preceded by a (n)number of sequential small conflicts or wars. Initially, his luck amount is 0. Each war is described by two integers, L[i] and W[i]:
-                    ·  	L[i] is the amount of luck associated with a war. If William IV wins the war, his luck amount will decrease by L[i]; if he loses it, his luck balance will increase by L[i].
+                <p>William IV is preparing for an important war that is preceded by a (n) number of sequential small conflicts or wars. Initially, his luck amount is 0. Each war is described by two integers, L[i] and W[i]:
+                    .	L[i] is the amount of luck associated with a war. If William IV wins the war, his luck amount will decrease by L[i]; if he loses it, his luck balance will increase by L[i].
                     ·      W[i] denotes the war's importance rating. It's equal to 1 if the war is important, and it's equal to 0 if it's unimportant.
                      
-                    If William IV loses no more than k important wars, what is the maximum amount of luck he can have after fighting in all the small wars? This value may be negative.
+                    If William IV loses no more than k important wars, what is the maximum amount of luck he can have after fighting in all the small wars? This value may be negative.<br>
                      
-                    Input Format
-                    The first line contains two space-separated integers n and k, the number of small wars and the maximum number of important wars William IV can lose.
-                    Each of the next n lines contains two space-separated integers, L[i] and W[i], the war’s luck amount and its importance rating respectively.
+                   <b> Input Format</b><br>
+                    1. The first line contains two space-separated integers n and k, the number of small wars and the maximum number of important wars William IV can lose.<br>
+                    2. Each of the next n lines contains two space-separated integers, L[i] and W[i], the war’s luck amount and its importance rating respectively.<br>
                      
-                    Output Format
-                    Answer-> Return the max luck amount achievable
-                     
-                    Constraints:
-                    ·  	1 ≤ n ≤ 100
-                    ·  	0 ≤ k ≤ n
-                    · 	1 ≤ L[i] ≤  10^4
-                    ·  	W[i] ∈ {0,1}
                     
-                    INPUT:     
-                    6 3         
-                    5 1         
-                    2 1
-                    1 1
-                    8 1
-                    10 0
-                    5 0
+                   <b> Return the max luck amount achievable</b><br>
+                     
+                    Constraints: <br>
+                    ·  	1 ≤ n ≤ 100<br>
+                    ·  	0 ≤ k ≤ n<br>
+                    · 	1 ≤ L[i] ≤  10^4<br>
+                    ·  	W[i] ∈ {0,1}<br>
+                    
+                    <b>INPUT: </b><br>  
+                    6 3<br>   
+                    5 1<br>   
+                    2 1<br>
+                    1 1<br>
+                    8 1<br>
+                    10 0<br>
+                    5 0<br>
                     </p>
             <% } if (Qdanera == 2) { %>
-                <p> N students are standing in a line in N blocks marked by the teacher as 1,2,3,4,.....,N. The N students are holding a card having written some integer value on it A1, A2, A3,.....,An.
+                <p> N students are standing in a line in N blocks marked by the teacher as 1,2,3,4,.....,N. The N students are holding a card having written some integer value on it A1, A2, A3,.....,An.<br><br>
                     Teacher has asked kritika to find the number of triplet of blocks on which students are standing (i,j,k) such that 1 &lt;= i &lt;= j &lt;= k &lt;= N , and 
-                    A(i)⊕A(i+1)⊕…⊕A(j−1) = A(j)⊕A(j+1)⊕…⊕A(k),
-                     
-                    where ⊕ denotes bitwise XOR.
-                    Kritika is weak in maths. Help her to solve the problem.
+                    A(i) ⊕ A(i+1) ⊕ … ⊕ A(j−1) = A(j) ⊕ A(j+1) ⊕ … ⊕A(k),where ⊕ denotes bitwise XOR.<br><br>
+                    Kritika is weak in maths. Help her to solve the problem.<br><br>
+                    Given Input:<br>
+                    N = 10<br>
+                    A1, A2, A3,.....,An = 12 , 2 , 3 , 0 , 8 , 1 , 11 , 4 , 10 , 1<br><br>
                     
-                    Given Input:
-                    N = 10
-                    A1, A2, A3,.....,An = 12 , 2 , 3 , 0 , 8 , 1 , 11 , 4 , 10 , 1
-                    
-                    Find the number of triplets.
+                    <b>Find the number of triplets.</b>
                     </p>
             <% } if (Qdanera == 3) { %>
-                <p>Three children Ace, Beta and Cal are playing a game in a triangular meadow in Miorbmark. All three of them stand on each corner of the garden and start moving along the edges of the garden. It is considered a win if none of them collide with each other once they start moving. What is the probability that they will win?Return the denominator of the probability</p>
+                <p>Three children Ace, Beta and Cal are playing a game in a triangular meadow in Miorbmark. All three of them stand on each corner of the garden and start moving along the edges of the garden.<br><br> It is considered a win if none of them collide with each other once they start moving. <br><br>What is the probability that they will win?<br><br>Return the denominator of the probability.</p>
                 <% } %>
             
             <form class="" action=<%= "/game/" + userId %> method="post">
@@ -674,35 +655,32 @@
     <div class="modal-bg <%=arthora%> country-bg">
         <div class="modal">
             <% if (Qarthora == 1) { %>
-                <p>Pixie and her brother Nova are playing a game in Miorbmark. Nova needs to guess the 3 numbers Pixie has in mind. Pixie gives the following clues:
-                    The product of the numbers is 72
-                    The sum of the numbers is 14
-                    The largest number is Pixie’s favourite number.
-                    What is the sum of the smaller two numbers?
+                <p>Pixie and her brother Nova are playing a game in Miorbmark.<br> Nova needs to guess the 3 numbers Pixie has in mind. <br><br>Pixie gives the following clues:<br><br>
+                    The product of the numbers is 72.The sum of the numbers is 14.<br>The largest number is Pixie’s favourite number. <br><br>
+                    What is the sum of the smaller two numbers?<br>
                     </p>
             <% } if (Qarthora == 2) { %>
                 <p>Madam Sis Prannarp, the owner of Savivas Tranart company , is very fond of Palindromes (the words that read the same forwards or backwards).
                     As she is launching the company's new iron called Kayak. She thinks that Palindromic brand names are appealing to millenials.
                     Sis Prannarp decided to push the creative team of the company for searching palindromic skills to a new level with new challenges.
                     In this challenge, Prannarp provides a string 's' consisting of lowercase English letters. Every day, for q days, she would select two integers l and r, take the substring s l...r (the substring of s from index l to index r), and ask the following questions.
-                    Consider all the Palindromes that can be constructed from some of the letters from s l...r. You can reorder the letters. Some of these Palindromes have the maximum length among all these palindromes. How many maximum length palindromes are there?
-                    For example,
-                    If s = madamimadam , l = 4 and r = 7, then we have,
-                    s = madamimadam so s[ l:r] = amim
-                    And “amim” can be broken down into = “mam” and “mim”, therefore number of maximum length palindromes = 2
-                     Input format:
-                    The first line contains the string s.
-                    The second line contains two space -separated integers L, R denoting the l and r values she selected.
-                    Your input: 
-                    racecarhannahmontanahelloworld
+                    Consider all the Palindromes that can be constructed from some of the letters from s l...r. You can reorder the letters. Some of these Palindromes have the maximum length among all these palindromes.<br> How many maximum length palindromes are there?<br><br>
+                    For example,<br>
+                    If s = madamimadam , l = 4 and r = 7, then we have, s = madamimadam so s[ l:r] = amim
+                    And “amim” can be broken down into = “mam” and “mim”, therefore number of maximum length palindromes = 2<br><br>
+                    <b>Input format:</b><br>
+                    The first line contains the string s.<br>
+                    The second line contains two space separated integers L, R denoting the l and r values she selected.<br><br>
+                    <b>Your input:</b><br> 
+                    racecarhannahmontanahelloworld<br>
                     3 15
                     </p>
             <% } if (Qarthora == 3) { %>
-                <p>In the land of Qaevia, "reflectivity" (denoted by K) of a string S of length N is defined as the number of characters in S at position i, such that Si != Sn-i+1 where 1&lt;=i&lt;=N/2 (1 indexed).
-                    For eg: “DACBAADAD” has reflectivity = 2.
-                    You are allowed to conduct operations on the string where an operation is defined as changing any character of the string to a different one.
-                    Given a string S = "BCDABABCBDCDABCDCABCDCABDCDCACBBABCDCDBACDCDCDBCDCBBBACDC"
-                    find the minimum number of operations to be done to change its reflectivity to K= 29
+                <p>In the land of Qaevia, "reflectivity" (denoted by K) of a string S of length N is defined as the number of characters in S at position i, such that Si != Sn-i+1 where 1&lt;=i&lt;=N/2 (1 indexed).<br><br>
+                    For eg: “DACBAADAD” has reflectivity = 2.<br>
+                    You are allowed to conduct operations on the string where an operation is defined as changing any character of the string to a different one.<br><br>
+                    Given a string S = "BCDABABCBDCDABCDCABCDCABDCDCACBBABCDCDBACDCDCDBCDCBBBACDC".<br><br>
+                    Find the minimum number of operations to be done to change its reflectivity to K= 29.
                     </p>
                 <% } %>
 
@@ -723,51 +701,51 @@
     <div class="modal-bg <%=miorbmark%> country-bg">
         <div class="modal">
             <% if (Qmiorbmark == 1) { %>
-                <p> George had the interview yesterday where the interviewer asked him to solve a coding question which he couldn’t solve. George is curious to know what could be the solution to that problem. Can you help him in solving the problem? 
+                <p> George had a interview yesterday where the interviewer asked him to solve a coding question which he couldn’t solve. George is curious to know what could be the solution to that problem. Can you help him in solving the problem? <br><br>
                     The question is as follows, you are given a string str and a number n. Consider a substring p of the string str. For each position of string str, mark it if there is an occurence of the substring that covers the position. More formally, position i will be marked if there exists such index j that: j ≤ i ≤ j+|p|+1 and …. = p. We will say that p produces x islands if all the marked positions form x groups of contiguous positions.
-                    You have to calculate and print the number of different substrings of string str that produce exactly n islands.
-                    Input Format
+                    You have to calculate and print the number of different substrings of string str that produce exactly n islands.<br><br>
+                    <b>Input Format</b><br><br>
                     The first line contains string str (1 ≤ |str| ≤ 10^5 ). The string consists of lowercase letters only. The second line contains an integer k (1 ≤ n ≤ |str|).
-                     
-                    INPUT:
-                    abaab
+                    <br><br>
+                    <b>INPUT:</b><br>
+                    abaab<br>
                     2
                     </p>
             <% } if (Qmiorbmark == 2) { %>
                 <p>There are a number of fish in the sea. Each of the fish can eat some amount of food. After each day, if any fish eats more food then it becomes sick or weaker than the left ones and die due to overeating. 
- 
+ <br> <br>
                     You are given the initial values of the food of each fish. Determine the number of days after which no fish dies, i.e., the time after which there is no fish with excess food other than the fish to its left.
-                     
-                    Example:
+                     <br> <br>
+                    Example: <br>
                     f = [3,6,2,7,5]  //food levels
                     Use a 1-indexed array.
                     On day 1, fish 2 and 4 die leaving f’ = [3,2,5].
                     On day 2, fish 3 and f’ dies leaving f’’ = [3,2].
                     There is no fish with excess food other than the one to its left, so fishes stop dying after day 2.
-                     
-                    Return: 
+                     <br>
+                    <b>Return:</b> <br> <br>
                     Int: the number of days until fish no longer die from excess food.
-                     
-                    Input format:
+                     <br> <br> <br>
+                    <b>Input format:</b><br>
                     The first line contains an integer n, the size of the array p.
                     The next line contains n space-separated integers p[i].
-                     
-                    Input:
-                    7
+                     <br><br><br>
+                    <b>INPUT:</b><br>
+                    7<br>
                     6 5 8 4 7 10 9
                     </p>
             <% } if (Qmiorbmark == 3) { %>
-                <p> George had the interview yesterday where the interviewer asked him to solve a coding question which he couldn’t solve. George is curious to know what could be the solution to that problem. Can you help him in solving the problem? 
+                <p> George had the interview yesterday where the interviewer asked him to solve a coding question which he couldn’t solve. George is curious to know what could be the solution to that problem. Can you help him in solving the problem? <br><br>
                     The question is as follows, you are given a string str and a number n. Consider a substring p of the string str. For each position of string str, mark it if there is an occurence of the substring that covers the position. More formally, position i will be marked if there exists such index j that: j ≤ i ≤ j+|p|+1 and …. = p. We will say that p produces x islands if all the marked positions form x groups of contiguous positions.
-                    You have to calculate and print the number of different substrings of string str that produce exactly n islands.
-                    Input Format
+                    You have to calculate and print the number of different substrings of string str that produce exactly n islands.<br><br>
+                    <b>Input Format</b><br><br>
                     The first line contains string str (1 ≤ |str| ≤ 10^5 ). The string consists of lowercase letters only. The second line contains an integer k (1 ≤ n ≤ |str|).
-                     
-                    INPUT:
-                    abaab
+                     <br><br>
+                    <b>INPUT:</b><br>
+                    abaab<br>
                     2
                     </p>
-                <% } %>>
+                <% } %>
 
             <form class="" action=<%= "/game/" + userId %> method="post">
                 <label for="answer"></label>
@@ -790,26 +768,23 @@
                     The pivot index of a 0-indexed array is defined as that index "k" such that
                     arr[0]+arr[1]...+arr[k-1] == arr[k]+arr[k+1]+...arr[N-1]
                     where N is the number of elements in arr and 0 &lt; k &lt; n.
-                    You are given an array ARR = [22,4,-25,-2,-1,33,9,2,30,15,-16,7,20,10,0,-13,-14]
+                    You are given an array <br> ARR = [22,4,-25,-2,-1,33,9,2,30,15,-16,7,20,10,0,-13,-14]  <br>
                     Given an integer T = -33, you can change the value of any one element in ARR to T or leave ARR unchanged. Find the number of all possible pivot indices in ARR.
-                    For eg: if ARR=[2,-1,2] and T = 3 then the answer = 1
-                    Explanation: we can change ARR to = [3,-1,2] then k=2 and ARR[0] + ARR[1]=ARR[2] i.e. 3-1=2
-                    since there is only one possible value for p, the answer is = 1.
                     </p>
             <% } if (Qidzora == 2) { %>
-                <p>You have opened your own stall in the bazaars of Yitanada. The following array shows the prices of the commodities sold in the bazaar. 
-                    ARR =  [32,71,14,37,56,0,98,0,3,91,4,88,49,30,18,29,43,92,83,55,52]
-                    The ith element in the array is the price of commodities on the ith day. You can buy and sell in the bazaar no more than twice. Find the maximum you can earn in no more than two buy-sell cycles. 
-                    For eg: if the array was = [7,3,9,2,11]
+                <p>You have opened your own stall in the bazaars of Yitanada. The following array shows the prices of the commodities sold in the bazaar. <br>
+                   <br> ARR =  [32,71,14,37,56,0,98,0,3,91,4,88,49,30,18,29,43,92,83,55,52] <br><br>
+                    The ith element in the array is the price of commodities on the ith day. You can buy and sell in the bazaar no more than twice. <br><br>Find the maximum you can earn in no more than two buy-sell cycles. <br><br>
+                    For eg: if the array was = [7,3,9,2,11]<br><br>
                     You could buy on day 1 and sell on day 2 then buy on day 3 and sell on day 4 and earn 15 units (9-3 + 11-2 = 15).
                     </p>
             <% } if (Qidzora == 3) { %>
-                <p>Following is a map depicting the number of venomous creatures in the 25 houses arranged in a 5X5 grid in a village in Silven. 
-                    23,83,74,93,68
-                    31,99,19,76,38
-                    48,29,11,37,55
-                    28,46,38,18,72
-                    93,82,6,37,44
+                <p>Following is a map depicting the number of venomous creatures in the 25 houses arranged in a 5X5 grid in a village in <b>Idzora</b> . 
+                  <br>  23,83,74,93,68 <br>
+                  <br>  31,99,19,76,38  <br>
+                   <br> 48,29,11,37,55  <br>
+                   <br> 28,46,38,18,72  <br>
+                   <br> 93,82,6,37,44   <br>
                     You have to move along a path in the grid, starting from the top left to the bottom right house. Remember that you can only move right or down. Find the minimum number of venomous creatures you can encounter on your path.
                     </p>
                 <% } %>
@@ -836,59 +811,61 @@
                     She laid down the toys of different categories in a line at home and asked her one child to pick the toys from one end and asked her other child to pick the toys from the other end.
                     But at the same time their neighbor’s naughty child comes and picks all the toys numbered from i to j (both inclusive) and puts them in reverse order.
                     
-                    Jenny wants to ensure that both her children get the identical toy. So she checks whether the toy category at both the ends are the same or not between k to l (both inclusive). Help her in checking by answering 1 if same and 0 otherwise.
+                    <br>Jenny wants to ensure that both her children get the identical toy. So she checks whether the toy category at both the ends are the same or not between k to l (both inclusive). Help her in checking by answering 1 if same and 0 otherwise.<br>
                     
-                    Input Format:
-                    The first line of input contains the original order in which toys are laid down. The next line contains an integer Q.
-                    Each of the following Q lines each contain 4 space separated integers i, j, k and l.
+                    <b>Input Format:</b>
+                    <br>The first line of input contains the original order in which toys are laid down. The next line contains an integer Q.
+                    Each of the following Q lines each contain 4 space separated integers i, j, k and l.<br>
                     
-                    Output Format:
-                    Output exactly Q integers (not separated by anything) , each containing the result of corresponding query as 1 or 0.
+                    <b>Output Format:</b>
+                    <br>Output exactly Q integers (not separated by anything) , each containing the result of corresponding query as 1 or 0.<br>
                     
                     
-                    Input:
-                    ABAABA
-                    4
-                    2 3 4 5
-                    1 2 4 5
-                    1 3 4 6
-                          2 4 1 6
+                    <b>Input:</b>
+                    <br>ABAABA<br>
+                    <br>4<br>
+                    <br>2 3 4 5<br>
+                    <br>1 2 4 5<br>
+                    <br>1 3 4 6<br>
+                    <br>2 4 1 6<br>
                     </p>
             <% } if (Qqaevia == 2) { %>
                 <p>Professor Dannison is taking a class of probability and exception. He wants his N students (numbered 1 through N) to play a game so that they could understand the concepts clearly.
                     For each valid i, the i-th student should choose an integer from a range [Li,Ri] uniformly randomly. Professor wants to know the expected value of the ratio A/B, where A is the product of the integers chosen by the students and B is the GCD of these integers. Please help him calculate it.
-                    It can be proved that this expected value can be expressed as a fraction P/Q, where P and Q are positive integers and Q is coprime with 998,244,353. You should compute P⋅Q^-1 modulo 998,244,353, where Q^-1 denotes the multiplicative inverse of Q modulo 998,244,353.
-                        Input Format:
-                    The first line of input contains a single integer N. N lines follow. 
-                    For each valid i, the i-th of these lines contains two space-separated integers Li and Ri.
-                    Output Format: print a single line containing one integer P⋅Q^-1 modulo 998,244,353.
-                    INPUT: 
-                    2
-                    2 4
-                    5 5</p>
+                    It can be proved that this expected value can be expressed as a fraction P/Q, where P and Q are positive integers and Q is coprime with 998,244,353. You should compute P⋅Q^-1 modulo 998,244,353, where Q^-1 denotes the multiplicative inverse of Q modulo 998,244,353.<br> <br>
+                        <b>Input Format:</b>
+                    <br>The first line of input contains a single integer N. N lines follow. 
+                    For each valid i, the i-th of these lines contains two space-separated integers Li and Ri.<br>
+                    <br>
+                    <b>Output Format:</b> 
+                    <br>Print a single line containing one integer P⋅Q^-1 modulo 998,244,353.<br> <br>
+                    <b>INPUT: </b>
+                    <br>2<br>
+                    <br>2 4<br>
+                    <br>5 5<br></p>
             <% } if (Qqaevia == 3) { %>
                 <p>Mother Jenny loves both of her twins equally but both of the children always think that their mother loves the other sibling the most.
                     One day she bought so many toys from the supermarket and she bought even no. of toys of each category so that she can divide the toys equally between both her children. Each category of toys is denoted by capital letters A, B, C….. 
                     She laid down the toys of different categories in a line at home and asked her one child to pick the toys from one end and asked her other child to pick the toys from the other end.
                     But at the same time their neighbor’s naughty child comes and picks all the toys numbered from i to j (both inclusive) and puts them in reverse order.
-                    
+                    <br>
                     Jenny wants to ensure that both her children get the identical toy. So she checks whether the toy category at both the ends are the same or not between k to l (both inclusive). Help her in checking by answering 1 if same and 0 otherwise.
+                    <br> <br>
+                    <b>Input Format:</b>
+                    <br>The first line of input contains the original order in which toys are laid down. The next line contains an integer Q.
+                    Each of the following Q lines each contain 4 space separated integers i, j, k and l.<br>
+                    <br>
+                    <b>Output Format:</b>
+                    <br>Output exactly Q integers (not separated by anything) , each containing the result of corresponding query as 1 or 0.<br>
                     
-                    Input Format:
-                    The first line of input contains the original order in which toys are laid down. The next line contains an integer Q.
-                    Each of the following Q lines each contain 4 space separated integers i, j, k and l.
                     
-                    Output Format:
-                    Output exactly Q integers (not separated by anything) , each containing the result of corresponding query as 1 or 0.
-                    
-                    
-                    Input:
-                    ABAABA
-                    4
-                    2 3 4 5
-                    1 2 4 5
-                    1 3 4 6
-                          2 4 1 6
+                    <b>Input:</b>
+                <h6> <br>ABAABA<br></h6>   
+                    <br>4<br>
+                    <br>2 3 4 5<br>
+                    <br>1 2 4 5<br>
+                    <br>1 3 4 6<br>
+                          <br>2 4 1 6<br>
                     </p>
                 <% } %>
 
@@ -910,61 +887,62 @@
         <div class="modal">
             <% if (Qwrafuthen == 1) { %>
                 <p>A group of people went to a gun shop to buy guns. The owner of the shop wants to maximize his number of new customers and the money he makes. To do this, he decides he'll multiply the price of each gun by the number of that customer's previously purchased guns plus 1. The first gun will be original price, (0+1) x original price, the next will be (1+1) x original price and so on.
- 
-                    Given the size of the group of people, the number of guns they want to purchase and the original prices of the gun, determine the minimum cost to purchase all of the guns. The number of guns they want equals the length of the c array.
-                    Input Format
+                 <br><br>
+                    Given the size of the group of people, the number of guns they want to purchase and the original prices of the gun, determine the minimum cost to purchase all of the guns. The number of guns they want equals the length of the c array.<br><br>
+                    <b>Input Format:</b><br>
                     The first line contains two space-separated integers n and k, the number of guns and the number of people.
                     The second line contains n space-separated positive integers c[i], the original price of each gun.
-                     
-                    Output Format
+                     <br><br>
+                    <b>Output Format</b><br>
                     Answer-> Return the minimum cost to purchase all guns.
-                     
-                    Constraints:
-                    ·      1 ≤ n, k ≤ 100
-                    ·     1 ≤ c[i] ≤ 10^6
-                    ·     Answer &lt;2^31
-                    ·      0 ≤ i &lt; n
-                     
-                    INPUT:
-                    3 2
-                    2 5 6
+                     <br><br>
+                    <b>Constraints:</b><br>
+                    ·      1 ≤ n, k ≤ 100<br>
+                    ·     1 ≤ c[i] ≤ 10^6<br>
+                    ·     Answer &lt;2^31<br>
+                    ·      0 ≤ i &lt; n<br>
+                     <br><br>
+                    <b>INPUT:</b> <br>
+                    3 2 <br>
+                    2 5 6  <br>
                     </p>
             <% } if (Qwrafuthen == 2) { %>
-                <p>Joey has one complaint from his friend Champ.  Whenever Joey plans to go out with Champ, he's busy doing assignments. Joey wants to help him finish it faster, but he's unable to understand the assignment! Can you help Joey understand Champ’s assignment so he can hang out with him?
-                    You are given an array of n distinct integers, arr = [a[0], a[1], …., a[n-1]]. Joey can swap any two elements of the array any number of times. An array will be considered good if the sum of |arr[i] – arr[i-1]| among 0 &lt; i &lt; n is minimal.
-                    Given the array arr, determine and return the minimum number of swaps Joey should perform in order to make the array good.
-                    Constraints:
+                <p> Whenever Joey plans to go out with Champ(his friend), he's busy doing assignments. Joey wants to help him finish it faster, but he's unable to understand the assignment! Can you help Joey understand Champ’s assignment so he can hang out with him?<br>
+                    You are given an array of n distinct integers, arr = [a[0], a[1], …., a[n-1]]. Joey can swap any two elements of the array any number of times. An array will be considered good if the sum of |arr[i] – arr[i-1]| among 0 &lt; i &lt; n is minimal.<br>
+                    Given the array arr, determine and return the minimum number of swaps Joey should perform in order to make the array good.<br>
+                    Constraints:<br>
                     ·     1 ≤ n ≤ 10^5
                     ·     1 ≤ arr[i] ≤ 2 x 10^9
-                     
-                    Input Format:
+                     <br>
+                <b>Input Format:</b>    <br>
                     The first line contains a single integer, n, the number of elements in arr. The second line contains n space-separated integers, arr[i].
-                    Output Format:
-                    ·        Return the minimum number of swaps required
-                    INPUT:
-                    4
-                    2 5 3 1
+                <b>  Output Format:</b>   <br>
+                    ·       <br>  Return the minimum number of swaps required
+                    INPUT: <br>
+                    4 <br>
+                    2 5 3 1 <br>
                     </p>
             <% } if (Qwrafuthen == 3) { %>
                 <p>A group of people went to a gun shop to buy guns. The owner of the shop wants to maximize his number of new customers and the money he makes. To do this, he decides he'll multiply the price of each gun by the number of that customer's previously purchased guns plus 1. The first gun will be original price, (0+1) x original price, the next will be (1+1) x original price and so on.
- 
+                    <br><br>
                     Given the size of the group of people, the number of guns they want to purchase and the original prices of the gun, determine the minimum cost to purchase all of the guns. The number of guns they want equals the length of the c array.
-                    Input Format
+                    <br><br>
+                    <b>Input Format</b><br>
                     The first line contains two space-separated integers n and k, the number of guns and the number of people.
                     The second line contains n space-separated positive integers c[i], the original price of each gun.
-                     
-                    Output Format
+                     <br><br>
+                    <b>Output Format</b><br>
                     Answer-> Return the minimum cost to purchase all guns.
-                     
-                    Constraints:
+                     <br><br>
+                    <b>Constraints:</b><br>
                     ·      1 ≤ n, k ≤ 100
                     ·     1 ≤ c[i] ≤ 10^6
                     ·     Answer &lt;2^31
                     ·      0 ≤ i &lt; n
-                     
-                    INPUT:
-                    3 2
-                    2 5 6
+                     <br><br>
+                    <b>INPUT:</b><br>
+                    <b>3 2</b><br>
+                    <b>2 5 6</b>
                     </p>
                 <% } %>
 
