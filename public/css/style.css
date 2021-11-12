@@ -1,5 +1,6 @@
 body {
-  background-image: url("/img/Ship-background.png");
+  background-image: url("../img/Ship-background.png");
+    background-size: cover;
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -33,6 +34,7 @@ body {
 }
 
 .modal-bg {
+  /* padding: 0; */
   position: fixed;
   width: 50%;
   height: 50%;
@@ -60,19 +62,21 @@ body {
   bottom: 200px;
 }
 .modal {
+
   position: relative;
   /* border-radius: 25px; */
   z-index: 1;
   position: relative;
   /* background-color: #e7e0c9; */
   color: black;
-  width: 50%;
-  height: 50%;
+  /* width: 50%;
+  height: 50%; */
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
   /* border: 2px solid black; */
+  /* padding: 0; */
 }
 
 .modal-close {
@@ -91,6 +95,7 @@ body {
   border: none;
   cursor: pointer;
   z-index: 1;
+  
 }
 
 .answer {
@@ -124,7 +129,7 @@ span {
 
 .bar {
   background-color: salmon;
-  width: 30%;
+  /* width: 30%; */
   float: right;
   height: 32px;
 }

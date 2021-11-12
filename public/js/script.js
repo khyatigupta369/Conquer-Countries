@@ -14,27 +14,10 @@ var Btn8 = document.querySelector('.idzora');
 var Btn9 = document.querySelector('.qaevia');
 var Btn10 = document.querySelector('.wrafuthen');
 
-// var PBtn1 = document.querySelector('.Petherion');
-// var PBtn2 = document.querySelector('.Psilven');
-// var PBtn3 = document.querySelector('.Pgorene');
-// var PBtn4 = document.querySelector('.Pyitanada');
-// var PBtn5 = document.querySelector('.Pdenera');
-// var PBtn6 = document.querySelector('.Parthora');
-// var PBtn7 = document.querySelector('.Pmiorbmark');
-// var PBtn8 = document.querySelector('.Pidzora');
-// var PBtn9 = document.querySelector('.Pqaevia');
-// var PBtn10 = document.querySelector('.Pwrafuthen');
-// modalBtn[0].onclick = function heelo(){
-//     console.log("fienfie");
-// };
-
-// function clicked(){
-//     console.log("Hello");
-// }
 var armySize = document.querySelector('.army').id;
+
 modalBtn[0].addEventListener('click',function(){
     modalBg[0].classList.add('bg-active');
-    console.log("claseihwcio");
 });
 submitBtn[0].addEventListener('click',function(){
     modalBg[0].classList.remove('bg-active');

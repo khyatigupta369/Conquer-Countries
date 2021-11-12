@@ -10,6 +10,7 @@
     align-items: center;
     visibility: hidden;
     opacity: 0;
+    /* overflow: auto; */
     transition: visibility 0s, opacity 0.5s;
 }
 .bg-active{
@@ -23,7 +24,7 @@
     background-color: #E7E0C9;
     color:black;
     width: 50%;
-    height:50%;
+    /* height:50%; */
     display: flex;
     justify-content: space-around;
     align-items: center;

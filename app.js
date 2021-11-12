@@ -8,6 +8,7 @@ const { ObjectId } = require("bson");
 
 const app = express();
 
+
 app.use(express.static("public"));
 app.use("/css", express.static(__dirname + "public/css"));
 app.use("/js", express.static(__dirname + "public/js"));
@@ -24,7 +25,6 @@ app.use(
     saveUninitialized: true,
   })
 );
-
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -115,6 +115,48 @@ const userSchema = new mongoose.Schema({
     type: String,
     default: "visible",
   },
+  
+  Qsilven: {
+    type: Number,
+    default: 1,
+  },
+  Qetherion: {
+    type: Number,
+    default: 1,
+  },
+  Qarthora: {
+    type: Number,
+    default: 1,
+  },
+  Qdanera: {
+    type: Number,
+    default: 1,
+  },
+  Qmiorbmark: {
+    type: Number,
+    default: 1,
+  },
+  Qidzora: {
+    type: Number,
+    default: 1,
+  },
+  Qwrafuthen: {
+    type: Number,
+    default: 1,
+  },
+  Qgorene: {
+    type: Number,
+    default: 1,
+  },
+  Qyitanada: {
+    type: Number,
+    default: 1,
+  },
+  Qqaevia: {
+    type: Number,
+    default: 1,
+  },
+  
 });
 
 // plugin
@@ -146,6 +188,32 @@ app.get("/ginstruction/:userId", (req, res) => {
   res.render("gameinstructionpage",{userId: userId})}
 );
 
+
+var items = [1, 2, 3];
+items[Math.floor(Math.random() * items.length)];
+
+let Qyitanada=items[Math.floor(Math.random() * items.length)];
+let Qwrafuthen=items[Math.floor(Math.random() * items.length)];
+let Qsilven=items[Math.floor(Math.random() * items.length)];
+let Qqaevia=items[Math.floor(Math.random() * items.length)];
+let Qmiorbmark=items[Math.floor(Math.random() * items.length)];
+let Qidzora=items[Math.floor(Math.random() * items.length)];
+let Qgorene=items[Math.floor(Math.random() * items.length)];
+let Qetherion=items[Math.floor(Math.random() * items.length)];
+let Qdanera=items[Math.floor(Math.random() * items.length)];
+let Qarthora=items[Math.floor(Math.random() * items.length)];
+
+console.log("random checker\n"+Qarthora);
+console.log(Qdanera);
+console.log(Qetherion);
+console.log(Qgorene);
+console.log(Qidzora);
+console.log(Qmiorbmark);
+console.log(Qqaevia);
+console.log(Qsilven);
+console.log(Qwrafuthen);
+console.log(Qyitanada);
+
 app.get("/game/:userId", (req, res) => {
   // console.log("from game route " + req.user);
   if (req.isAuthenticated()) {
@@ -155,29 +223,63 @@ app.get("/game/:userId", (req, res) => {
       {
         _id: userId,
       },
-      (err, foundUser) => {
+      (err, found) => {
         if (err) console.log(err);
         else {
-          res.render("game", {
-            bon1: foundUser.bon1,
-            bon2: foundUser.bon2,
-            bon3: foundUser.bon3,
-            user: foundUser,
-            userId: foundUser._id,
-            username: foundUser.username,
-            countries: foundUser.countries,
-            armySize: foundUser.armySize,
-            silven: foundUser.Psilven,
-            etherion: foundUser.Petherion,
-            arthora: foundUser.Parthora,
-            danera: foundUser.Pdanera,
-            miorbmark: foundUser.Pmiorbmark,
-            idzora: foundUser.Pidzora,
-            wrafuthen: foundUser.Pwrafuthen,
-            gorene: foundUser.Pgorene,
-            yitanada: foundUser.Pyitanada,
-            qaevia: foundUser.Pqaevia,
-          });
+          
+
+          User.findOneAndUpdate(
+                { _id: userId },
+                { Qdanera: Qdanera, Qarthora: Qarthora, Qetherion: Qetherion, Qgorene: Qgorene, Qidzora: Qidzora, Qmiorbmark: Qmiorbmark, Qqaevia: Qqaevia, Qsilven: Qsilven, Qwrafuthen: Qwrafuthen, Qyitanada: Qyitanada},
+                { new: true },(err,found)=>{
+                  // console.log("arthora"+found.Qarthora);
+                  // console.log(found.Qdanera);
+                  // console.log(found.Qetherion);
+                  // console.log(found.Qgorene);
+                  // console.log(found.Qidzora);
+                  // console.log(found.Qmiorbmark);
+                  // console.log(found.Qqaevia);
+                  // console.log(found.Qsilven);
+                  // console.log(found.Qwrafuthen);
+                  // console.log(found.Qyitanada);
+                  if(err) console.log(err)
+                  else {
+                    res.render("game", {
+                      bon1: found.bon1,
+                      bon2: found.bon2,
+                      bon3: found.bon3,
+                      user: found,
+                      userId: found._id,
+                      username: found.username,
+                      countries: found.countries,
+                      armySize: found.armySize,
+                      silven: found.Psilven,
+                      etherion: found.Petherion,
+                      arthora: found.Parthora,
+                      danera: found.Pdanera,
+                      miorbmark: found.Pmiorbmark,
+                      idzora: found.Pidzora,
+                      wrafuthen: found.Pwrafuthen,
+                      gorene: found.Pgorene,
+                      yitanada: found.Pyitanada,
+                      qaevia: found.Pqaevia,
+                      
+                      Qsilven: found.Qsilven,
+                      Qetherion: found.Qetherion,
+                      Qarthora: found.Qarthora,
+                      Qdanera: found.Qdanera,
+                      Qmiorbmark: found.Qmiorbmark,
+                      Qidzora: found.Qidzora,
+                      Qwrafuthen: found.Qwrafuthen,
+                      Qgorene: found.Qgorene,
+                      Qyitanada: found.Qyitanada,
+                      Qqaevia: found.Qqaevia,
+                    });
+                  }
+                }
+            );
+
+          
         }
       }
     );
@@ -214,8 +316,8 @@ app.post("/login", (req, res) => {
     if (err) console.log(err);
     else {
       passport.authenticate("local")(req, res, () => {
-        User.findOne({username: req.body.username}, (err,foundUser)=>{
-          res.redirect("/game/" + foundUser._id);
+        User.findOne({username: req.body.username}, (err,found)=>{
+          res.redirect("/game/" + found._id);
         })
       });
     }
@@ -236,7 +338,7 @@ app.post("/game/:userId",(req,res)=>{
         let bonus1 = req.body.bonus1;
         let armySize = found.armySize;
         let bon1 = found.bon1;
-        if (bonus1 == 4) {
+        if (bonus1 == 47632) {
           armySize = armySize + 100;
         }
         bon1 = "bon1";
@@ -266,8 +368,8 @@ app.post("/game/:userId",(req,res)=>{
         let bonus2 = req.body.bonus2;
         let armySize = found.armySize;
         let bon2 = found.bon2;
-        if (bonus2 == 4) {
-          armySize = armySize + 100;
+        if (bonus2 == 67) {
+          armySize = armySize + 200;
           // console.log("chalgya");
         }
         // console.log("yeh wala " + armySize);
@@ -298,8 +400,8 @@ app.post("/game/:userId",(req,res)=>{
         let bonus3 = req.body.bonus3;
         let armySize = found.armySize;
         let bon3 = found.bon3;
-        if (bonus3 == 4) {
-          armySize = armySize + 100;
+        if (bonus3 == 2) {
+          armySize = armySize + 300;
           // console.log("chalgya");
         }
         // console.log("yeh wala " + armySize);
@@ -330,13 +432,36 @@ app.post("/game/:userId",(req,res)=>{
         let armySize = found.armySize;
         let countries = found.countries;
         let Petherion = found.Petherion;
-        if (etherion == 4) {
+        let Qetherion =found.Qetherion;
+        if(Qetherion==1){
+          if (etherion == 6) {
           armySize = armySize + 400;
           countries = countries + 1;
           // console.log("chalgya");
         }
         else {
           armySize = armySize - 100
+        }
+        }
+        else if(Qetherion==2){
+          if (etherion == 3) {
+            armySize = armySize + 400;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          }  
+        }
+        else if(Qetherion==3){
+          if (etherion == 3) {
+            armySize = armySize + 400;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          } 
         }
         // console.log("yeh wala " + armySize);
         Petherion = "Petherion";
@@ -367,14 +492,38 @@ app.post("/game/:userId",(req,res)=>{
         let armySize = found.armySize;
         let countries = found.countries;
         let Psilven = found.Psilven;
-        if (silven == 4) {
-          armySize = armySize + 350;
-          countries = countries + 1;
-          // console.log("chalgya");
+        let Qsilven= found.Qsilven;
+        if(Qsilven==1){
+          if (silven == 01021) {
+            armySize = armySize + 350;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          }
         }
-        else {
-          armySize = armySize - 100
+        else if(Qsilven==2){
+          if (silven == 17) {
+            armySize = armySize + 350;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          }
         }
+        else if(Qsilven==3){
+          if (silven == 220) {
+            armySize = armySize + 350;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          }
+        }
+        
         // console.log("yeh wala " + armySize);
         Psilven = "Psilven";
         User.findOneAndUpdate(
@@ -405,14 +554,37 @@ app.post("/game/:userId",(req,res)=>{
         let armySize = found.armySize;
         let countries = found.countries;
         let Pgorene = found.Pgorene;
-        if (gorene == 4) {
+        let Qgorene = found.Qgorene;
+        if(Qgorene==1){
+          if (gorene == 3) {
           armySize = armySize + 200;
           countries = countries + 1;
           // console.log("chalgya");
         }
         else {
           armySize = armySize - 100
+        }}
+        else if(Qgorene==2){
+          if (gorene == 12) {
+            armySize = armySize + 200;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          }
         }
+        else if(Qgorene==3){
+          if (gorene == 1) {
+            armySize = armySize + 200;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          }
+        }
+        
         // console.log("yeh wala " + armySize);
         Pgorene = "Pgorene";
         User.findOneAndUpdate(
@@ -443,13 +615,36 @@ app.post("/game/:userId",(req,res)=>{
         let armySize = found.armySize;
         let countries = found.countries;
         let Pyitanada = found.Pyitanada;
-        if (yitanada == 4) {
-          armySize = armySize + 500;
-          countries = countries + 1;
-          // console.log("chalgya");
+        let Qyitanada = found.Qyitanada;
+        if(Qyitanada==1){
+          if (yitanada == 5) {
+            armySize = armySize + 500;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          }
         }
-        else {
-          armySize = armySize - 100
+        else if(Qyitanada==2){
+          if (yitanada == 4) {
+            armySize = armySize + 500;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          }
+        }
+        else if(Qyitanada==3){
+          if (yitanada == 4) {
+            armySize = armySize + 500;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          }
         }
         // console.log("yeh wala " + armySize);
         Pyitanada = "Pyitanada";
@@ -480,14 +675,38 @@ app.post("/game/:userId",(req,res)=>{
         let armySize = found.armySize;
         let countries = found.countries;
         let Pdanera = found.Pdanera;
-        if (danera == 4) {
-          armySize = armySize + 150;
-          countries = countries + 1;
-          // console.log("chalgya");
+        let Qdanera = found.Qdanera;
+        if(Qdanera==1){
+          if (danera == 29) {
+            armySize = armySize + 150;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          }
         }
-        else {
-          armySize = armySize - 100
+        else if(Qdanera==2){
+          if (danera == 9) {
+            armySize = armySize + 150;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          }
         }
+        else if(Qdanera==3){
+          if (danera == 4) {
+            armySize = armySize + 150;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          }
+        }
+        
         // console.log("yeh wala " + armySize);
         Pdanera = "Pdanera";
         User.findOneAndUpdate(
@@ -516,13 +735,36 @@ app.post("/game/:userId",(req,res)=>{
         let armySize = found.armySize;
         let countries = found.countries;
         let Parthora = found.Parthora;
-        if (arthora == 4) {
-          armySize = armySize + 250;
-          countries = countries + 1;
-          // console.log("chalgya");
+        let Qarthora= found.Qarthora;
+        if(Qarthora==1){
+          if (arthora == 6) {
+            armySize = armySize + 250;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          }  
         }
-        else {
-          armySize = armySize - 100
+        else if(Qarthora==2){
+          if (arthora == 120) {
+            armySize = armySize + 250;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          }
+        }
+        else if(Qarthora==3){
+          if (arthora == 13) {
+            armySize = armySize + 250;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          }
         }
         // console.log("yeh wala " + armySize);
         Parthora = "Parthora";
@@ -552,13 +794,36 @@ app.post("/game/:userId",(req,res)=>{
         let armySize = found.armySize;
         let countries = found.countries;
         let Pmiorbmark = found.Pmiorbmark;
-        if (miorbmark == 4) {
-          armySize = armySize + 450;
-          countries = countries + 1;
-          // console.log("chalgya");
+        let Qmiorbmark = found.Qmiorbmark;
+        if(Qmiorbmark==1){
+          if (miorbmark == 3) {
+            armySize = armySize + 450;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          }
         }
-        else {
-          armySize = armySize - 100
+        else if(Qmiorbmark==2){
+          if (miorbmark == 2) {
+            armySize = armySize + 450;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          }
+        }
+        else if(Qmiorbmark==3){
+          if (miorbmark == 3) {
+            armySize = armySize + 450;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          }
         }
         // console.log("yeh wala " + armySize);
         Pmiorbmark = "Pmiorbmark";
@@ -588,14 +853,38 @@ app.post("/game/:userId",(req,res)=>{
         let armySize = found.armySize;
         let countries = found.countries;
         let Pidzora = found.Pidzora;
-        if (idzora == 4) {
-          armySize = armySize + 250;
-          countries = countries + 1;
-          // console.log("chalgya");
+        let Qidzora = found.Qidzora;
+        if(Qidzora==1){
+          if (idzora == 5) {
+            armySize = armySize + 250;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          }
         }
-        else {
-          armySize = armySize - 100
+        else if(Qidzora==2){
+          if (idzora == 4) {
+            armySize = armySize + 250;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          }
         }
+        else if(Qidzora==3){
+          if (idzora == 4) {
+            armySize = armySize + 250;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          }
+        }
+        
         // console.log("yeh wala " + armySize);
         Pidzora = "Pidzora";
         User.findOneAndUpdate(
@@ -624,13 +913,36 @@ app.post("/game/:userId",(req,res)=>{
         let armySize = found.armySize;
         let countries = found.countries;
         let Pqaevia = found.Pqaevia;
-        if (qaevia == 4) {
-          armySize = armySize + 350;
-          countries = countries + 1;
-          // console.log("chalgya");
+        let Qqaevia=found.Qqaevia;
+        if(Qqaevia==1){
+          if (qaevia == 1010) {
+            armySize = armySize + 350;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          }
         }
-        else {
-          armySize = armySize - 100
+        else if(Qqaevia==2){
+          if (qaevia == 15) {
+            armySize = armySize + 350;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          }
+        }
+        else if(Qqaevia==3){
+          if (qaevia == 1010) {
+            armySize = armySize + 350;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          }
         }
         // console.log("yeh wala " + armySize);
         Pqaevia = "Pqaevia";
@@ -660,13 +972,36 @@ app.post("/game/:userId",(req,res)=>{
         let armySize = found.armySize;
         let countries = found.countries;
         let Pwrafuthen = found.Pwrafuthen;
-        if (wrafuthen == 4) {
-          armySize = armySize + 300;
-          countries = countries + 1;
-          // console.log("chalgya");
+        let Qwrafuthen= found.Qwrafuthen;
+        if(Qwrafuthen==1){
+          if (wrafuthen == 15) {
+            armySize = armySize + 300;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          }
         }
-        else {
-          armySize = armySize - 100
+        else if(Qwrafuthen==2){
+          if (wrafuthen == 2) {
+            armySize = armySize + 300;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          }
+        }
+        else if(Qwrafuthen==15){
+          if (wrafuthen == 15) {
+            armySize = armySize + 300;
+            countries = countries + 1;
+            // console.log("chalgya");
+          }
+          else {
+            armySize = armySize - 100
+          }
         }
         // console.log("yeh wala " + armySize);
         Pwrafuthen = "Pwrafuthen";

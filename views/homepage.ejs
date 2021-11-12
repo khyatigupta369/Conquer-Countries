@@ -12,7 +12,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body >
-
+  <div class="music" style="visibility: hidden; z-index: -1; height: 1px;">
+    <embed src="/img/Blackbeard.mp3" AutoPlay loop hidden>
+  </div>
     <div class="hero" id="home">
         <div class="hero__container">
           <h1 class="hero__heading"><span>TERRITORY CONQUEST</span></h1>
@@ -26,3 +28,31 @@
       </div>
 </body>
 </html>
+
+
+<script>
+  var myAudio = document.getElementById("myAudio");
+  myAudio.volume=0.6;
+  // var isPlaying = true;
+  // var icon = document.getElementById("icon");
+  
+  // function togglePlay() {
+  // //   isPlaying ? myAudio.pause() : myAudio.play();
+  //   if(isPlaying==true){
+  //     myAudio.pause()
+  //     icon.innerHTML="volume_off"
+  //   }
+  //   else{
+  //       myAudio.play()
+  //       icon.innerHTML="volume_up"
+  //   }
+  // };
+  
+  // myAudio.onplaying = function() {
+  //   isPlaying = true;
+  // };
+  // myAudio.onpause = function() {
+  //   isPlaying = false;
+  // };
+  
+      </script>
