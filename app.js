@@ -217,16 +217,16 @@ let Qetherion=items[Math.floor(Math.random() * items.length)];
 let Qdanera=items[Math.floor(Math.random() * items.length)];
 let Qarthora=items[Math.floor(Math.random() * items.length)];
 
-// let Qyitanada=1;
-// let Qwrafuthen=1;
-// let Qsilven=1;
-// let Qqaevia=1;
-// let Qmiorbmark=1;
-// let Qidzora=1;
-// let Qgorene=1;
-// let Qetherion=1;
-// let Qdanera=1;
-// let Qarthora=1;
+// let Qyitanada=3;
+// let Qwrafuthen=3;
+// let Qsilven=3;
+// let Qqaevia=3;
+// let Qmiorbmark=3;
+// let Qidzora=3;
+// let Qgorene=3;
+// let Qetherion=3;
+// let Qdanera=3;
+// let Qarthora=3;
 
 
 // console.log("random checker\n"+Qarthora);
@@ -300,23 +300,23 @@ let Qarthora=items[Math.floor(Math.random() * items.length)];
   }
 });
 
-app.post("/register", (req, res) => {
-  User.register(
-    { username: req.body.username },
-    req.body.password,
-    (err, User) => {
-      if (err) {
-        console.log(err);
-        res.redirect("/register");
-      } else {
-        passport.authenticate("local")(req, res, () => {
-          const userId = User._id;
-          res.redirect("/game/" + userId);
-        });
-      }
-    }
-  );
-});
+// app.post("/register", (req, res) => {
+//   User.register(
+//     { username: req.body.username },
+//     req.body.password,
+//     (err, User) => {
+//       if (err) {
+//         console.log(err);
+//         res.redirect("/register");
+//       } else {
+//         passport.authenticate("local")(req, res, () => {
+//           const userId = User._id;
+//           res.redirect("/game/" + userId);
+//         });
+//       }
+//     }
+//   );
+// });
 
 app.post("/login", (req, res) => {
   const user = new User({
@@ -466,7 +466,7 @@ app.post("/game/:userId",(req,res)=>{
           }  
         }
         else if(Qetherion==3){
-          if (etherion == 3) {
+          if (etherion == 6) {
             armySize = armySize + 400;
             countries = countries + 1;
             // console.log("chalgya");
