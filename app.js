@@ -289,23 +289,23 @@ let Qarthora=items[Math.floor(Math.random() * items.length)];
   }
 });
 
-app.post("/register", (req, res) => {
-  User.register(
-    { username: req.body.username },
-    req.body.password,
-    (err, User) => {
-      if (err) {
-        console.log(err);
-        res.redirect("/register");
-      } else {
-        passport.authenticate("local")(req, res, () => {
-          const userId = User._id;
-          res.redirect("/game/" + userId);
-        });
-      }
-    }
-  );
-});
+// app.post("/register", (req, res) => {
+//   User.register(
+//     { username: req.body.username },
+//     req.body.password,
+//     (err, User) => {
+//       if (err) {
+//         console.log(err);
+//         res.redirect("/register");
+//       } else {
+//         passport.authenticate("local")(req, res, () => {
+//           const userId = User._id;
+//           res.redirect("/game/" + userId);
+//         });
+//       }
+//     }
+//   );
+// });
 
 app.post("/login", (req, res) => {
   const user = new User({
