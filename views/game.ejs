@@ -25,6 +25,13 @@
         <a onClick="togglePlay()"><i class="material-icons" id="icon">volume_up</i></a>
     </div>
 
+    <div class="progress-bar">
+        <div class="progress-bar-value" id="<%= armySize %>">ARMY SIZE : <%= armySize %></div>
+        <div class="progress-bar-fill"></div>
+    </div>
+
+    <!-- <div class="gif1"><img src="/img/skull.gif" alt="" srcset=""><div> -->
+
 <!-- <a href="https://www.google.co.in/">google</a> -->
     <button class="Button <%=bon1%>">Bonus 1</button>
     <div class="modal-bg">
@@ -82,9 +89,8 @@
         </div>
         <span class="modal-close">X</span>
     </div>
-<!-- BAR CODE FOR ARMY SIZE  -->
 
-    <div class="army" id="<%= armySize %>">ARMY SIZE: <%= armySize %>
+    <div class="army" id="<%= armySize %>">
     </div>
     <div class="countries" id="<%= countries %>"></div>
 
@@ -419,7 +425,7 @@
                     0 0 3 <br>
                     1 0 3 <br>
                     1 3 3 <br></b>                 
-                    Give the output for the above input.
+                    Give the sum of last three digits of output for the above input.
                     </p>
             <% } if (Qsilven == 2) { %>
                 <p>Anuj has a building block game, he created two buildings with some blocks. Blocks have some non-negative integer number written on it. Building a[n] and building b[m] where index 0 denotes the top of the building. Anuj challenges Sam to play the following game: <br><br>
@@ -701,7 +707,7 @@
     <div class="modal-bg <%=miorbmark%> country-bg">
         <div class="modal">
             <% if (Qmiorbmark == 1) { %>
-                <p> George had a interview yesterday where the interviewer asked him to solve a coding question which he couldn’t solve. George is curious to know what could be the solution to that problem. Can you help him in solving the problem? <br><br>
+                <p> George had an interview yesterday where the interviewer asked him to solve a coding question which he couldn’t solve. George is curious to know what could be the solution to that problem. Can you help him in solving the problem? <br><br>
                     The question is as follows, you are given a string str and a number n. Consider a substring p of the string str. For each position of string str, mark it if there is an occurence of the substring that covers the position. More formally, position i will be marked if there exists such index j that: j ≤ i ≤ j+|p|+1 and …. = p. We will say that p produces x islands if all the marked positions form x groups of contiguous positions.
                     You have to calculate and print the number of different substrings of string str that produce exactly n islands.<br><br>
                     <b>Input Format</b><br><br>
@@ -735,7 +741,7 @@
                     6 5 8 4 7 10 9
                     </p>
             <% } if (Qmiorbmark == 3) { %>
-                <p> George had the interview yesterday where the interviewer asked him to solve a coding question which he couldn’t solve. George is curious to know what could be the solution to that problem. Can you help him in solving the problem? <br><br>
+                <p> George had an interview yesterday where the interviewer asked him to solve a coding question which he couldn’t solve. George is curious to know what could be the solution to that problem. Can you help him in solving the problem? <br><br>
                     The question is as follows, you are given a string str and a number n. Consider a substring p of the string str. For each position of string str, mark it if there is an occurence of the substring that covers the position. More formally, position i will be marked if there exists such index j that: j ≤ i ≤ j+|p|+1 and …. = p. We will say that p produces x islands if all the marked positions form x groups of contiguous positions.
                     You have to calculate and print the number of different substrings of string str that produce exactly n islands.<br><br>
                     <b>Input Format</b><br><br>
@@ -765,10 +771,10 @@
         <div class="modal">
             <% if (Qidzora == 1) { %>
                 <p>
-                    The pivot index of a 0-indexed array is defined as that index "k" such that
-                    arr[0]+arr[1]...+arr[k-1] == arr[k]+arr[k+1]+...arr[N-1]
-                    where N is the number of elements in arr and 0 &lt; k &lt; n.
-                    You are given an array <br> ARR = [22,4,-25,-2,-1,33,9,2,30,15,-16,7,20,10,0,-13,-14]  <br>
+                    The pivot index of a 0-indexed array is defined as that index "k" such that <br> <br>
+                    arr[0]+arr[1]...+arr[k-1] == arr[k]+arr[k+1]+...arr[N-1] <br> <br>
+                    where N is the number of elements in arr and 0 &lt; k &lt; n. <br><br>
+                    You are given an array <br> ARR = [22,4,-25,-2,-1,33,9,2,30,15,-16,7,20,10,0,-13,-14]  <br> <br>
                     Given an integer T = -33, you can change the value of any one element in ARR to T or leave ARR unchanged. Find the number of all possible pivot indices in ARR.
                     </p>
             <% } if (Qidzora == 2) { %>
@@ -993,6 +999,7 @@ myAudio.onpause = function() {
     <script>
         window.onload = function() {
             document.getElementById("myAudio").play();
+            updateProgressBar();
         }
 
 var myAudio = document.getElementById("myAudio");
@@ -1018,6 +1025,14 @@ myAudio.onplaying = function() {
 myAudio.onpause = function() {
   isPlaying = false;
 };
+
+
+    function updateProgressBar(){
+        var army = document.getElementsByClassName('army')[0].id;
+        var value = (army/4150)*100;
+        document.querySelector(".progress-bar-fill").style.width = `${value}%`;
+    }
+
     </script>
 </body>
 
