@@ -28,8 +28,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-// const db = "mongodb://localhost:27017/userDB";
-const db = "mongodb+srv://Khyati:%231Khyati@cluster0.rsaxe.mongodb.net/userDB";
+const db = "mongodb://localhost:27017/userDB";
 // const db = require('./config/key').mongoURI;
 
 mongoose
@@ -115,7 +114,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     default: "visible",
   },
-  
+
   Qsilven: {
     type: Number,
     default: 1,
@@ -156,7 +155,7 @@ const userSchema = new mongoose.Schema({
     type: Number,
     default: 1,
   },
-  
+
 });
 
 // plugin
@@ -202,7 +201,7 @@ app.get("/game/:userId", (req, res) => {
       (err, found) => {
         if (err) console.log(err);
         else {
-          
+
 var items = [1, 2, 3];
 items[Math.floor(Math.random() * items.length)];
 
@@ -275,7 +274,7 @@ let Qarthora=items[Math.floor(Math.random() * items.length)];
                       gorene: found.Pgorene,
                       yitanada: found.Pyitanada,
                       qaevia: found.Pqaevia,
-                      
+
                       Qsilven: found.Qsilven,
                       Qetherion: found.Qetherion,
                       Qarthora: found.Qarthora,
@@ -291,7 +290,7 @@ let Qarthora=items[Math.floor(Math.random() * items.length)];
                 }
             );
 
-          
+
         }
       }
     );
@@ -341,7 +340,7 @@ app.post("/game/:userId",(req,res)=>{
   const userId = req.body.userId;
 
   if(buttonName==="bon1"){
-    
+
     User.findOne({_id: userId}, (err,found)=>{
       if(err){
         console.log(err);
@@ -376,7 +375,7 @@ app.post("/game/:userId",(req,res)=>{
       if(err){
         console.log(err);
       }else{
-        
+
         let bonus2 = req.body.bonus2;
         let armySize = found.armySize;
         let bon2 = found.bon2;
@@ -399,7 +398,7 @@ app.post("/game/:userId",(req,res)=>{
         // console.log(userId + " from bonus2");
         res.redirect("/game/" + userId);
 
-        
+
       }
     });
   }
@@ -408,7 +407,7 @@ app.post("/game/:userId",(req,res)=>{
       if(err){
         console.log(err);
       }else{
-        
+
         let bonus3 = req.body.bonus3;
         let armySize = found.armySize;
         let bon3 = found.bon3;
@@ -439,7 +438,7 @@ app.post("/game/:userId",(req,res)=>{
       if(err){
         console.log(err);
       }else{
-        
+
         let etherion = req.body.etherion;
         let armySize = found.armySize;
         let countries = found.countries;
@@ -463,7 +462,7 @@ app.post("/game/:userId",(req,res)=>{
           }
           else {
             armySize = armySize - 100
-          }  
+          }
         }
         else if(Qetherion==3){
           if (etherion == 6) {
@@ -473,7 +472,7 @@ app.post("/game/:userId",(req,res)=>{
           }
           else {
             armySize = armySize - 100
-          } 
+          }
         }
         // console.log("yeh wala " + armySize);
         Petherion = "Petherion";
@@ -498,8 +497,8 @@ app.post("/game/:userId",(req,res)=>{
       if(err){
         console.log(err);
       }else{
-        
-        
+
+
         let silven = req.body.silven;
         let armySize = found.armySize;
         let countries = found.countries;
@@ -535,7 +534,7 @@ app.post("/game/:userId",(req,res)=>{
             armySize = armySize - 100
           }
         }
-        
+
         // console.log("yeh wala " + armySize);
         Psilven = "Psilven";
         User.findOneAndUpdate(
@@ -560,8 +559,8 @@ app.post("/game/:userId",(req,res)=>{
       if(err){
         console.log(err);
       }else{
-        
-        
+
+
         let gorene = req.body.gorene;
         let armySize = found.armySize;
         let countries = found.countries;
@@ -596,7 +595,7 @@ app.post("/game/:userId",(req,res)=>{
             armySize = armySize - 100
           }
         }
-        
+
         // console.log("yeh wala " + armySize);
         Pgorene = "Pgorene";
         User.findOneAndUpdate(
@@ -621,8 +620,8 @@ app.post("/game/:userId",(req,res)=>{
       if(err){
         console.log(err);
       }else{
-        
-        
+
+
         let yitanada = req.body.yitanada;
         let armySize = found.armySize;
         let countries = found.countries;
@@ -682,7 +681,7 @@ app.post("/game/:userId",(req,res)=>{
       if(err){
         console.log(err);
       }else{
-        
+
         let danera = req.body.danera;
         let armySize = found.armySize;
         let countries = found.countries;
@@ -718,7 +717,7 @@ app.post("/game/:userId",(req,res)=>{
             armySize = armySize - 100
           }
         }
-        
+
         // console.log("yeh wala " + armySize);
         Pdanera = "Pdanera";
         User.findOneAndUpdate(
@@ -742,7 +741,7 @@ app.post("/game/:userId",(req,res)=>{
       if(err){
         console.log(err);
       }else{
-        
+
         let arthora = req.body.arthora;
         let armySize = found.armySize;
         let countries = found.countries;
@@ -756,7 +755,7 @@ app.post("/game/:userId",(req,res)=>{
           }
           else {
             armySize = armySize - 100
-          }  
+          }
         }
         else if(Qarthora==2){
           if (arthora == 120) {
@@ -801,7 +800,7 @@ app.post("/game/:userId",(req,res)=>{
       if(err){
         console.log(err);
       }else{
-       
+
         let miorbmark = req.body.miorbmark;
         let armySize = found.armySize;
         let countries = found.countries;
@@ -860,7 +859,7 @@ app.post("/game/:userId",(req,res)=>{
       if(err){
         console.log(err);
       }else{
-        
+
         let idzora = req.body.idzora;
         let armySize = found.armySize;
         let countries = found.countries;
@@ -896,7 +895,7 @@ app.post("/game/:userId",(req,res)=>{
             armySize = armySize - 100
           }
         }
-        
+
         // console.log("yeh wala " + armySize);
         Pidzora = "Pidzora";
         User.findOneAndUpdate(
@@ -920,7 +919,7 @@ app.post("/game/:userId",(req,res)=>{
       if(err){
         console.log(err);
       }else{
-        
+
         let qaevia = req.body.qaevia;
         let armySize = found.armySize;
         let countries = found.countries;
@@ -979,7 +978,7 @@ app.post("/game/:userId",(req,res)=>{
       if(err){
         console.log(err);
       }else{
-        
+
         let wrafuthen = req.body.wrafuthen;
         let armySize = found.armySize;
         let countries = found.countries;
